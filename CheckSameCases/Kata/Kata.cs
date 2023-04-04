@@ -11,22 +11,15 @@ namespace Kata
     {
         public static int SameCase(char a, char b)
         {
-            var aToLower = Regex.IsMatch(a.ToString(), @"^[a-z]+$");
-            var bToLower = Regex.IsMatch(b.ToString(), @"^[a-z]+$");
-            var aToUpper = Regex.IsMatch(a.ToString(), @"^[A-Z]+$");
-            var bToUpper = Regex.IsMatch(b.ToString(), @"^[A-Z]+$");
-            var aIsLetter = Char.IsLetter(a);
-            var bIsLetter = Char.IsLetter(b);
-
-            if ((aToLower == true && bToLower == true) || (aToUpper == true && bToUpper == true))
+            if ((Char.IsLower(a) && Char.IsLower(b)) || (Char.IsUpper(a) && Char.IsUpper(b)))
             {
                 return 1;
             }
-            else if ((aToLower == true && bToUpper == true) || (aToUpper == true && bToLower == true))
+            else if ((Char.IsLower(a) && Char.IsUpper(b)) || (Char.IsUpper(a) && Char.IsLower(b)))
             {
                 return 0;
             }
-            else if (!bIsLetter || !bIsLetter)
+            else if (!Char.IsLetter(b) || !Char.IsLetter(a))
             {
                 return -1;
             }
