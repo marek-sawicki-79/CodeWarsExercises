@@ -23,3 +23,4 @@ namespace FindTheSlope
 			Assert.AreEqual("undefined", s.slope(test6));
 		}
 	}
+}
