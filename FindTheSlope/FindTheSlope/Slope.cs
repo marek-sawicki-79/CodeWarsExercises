@@ -10,7 +10,18 @@ namespace FindTheSlope
     {
         public String slope(int[] points)
         {
-            return "undefined";
+            var licznik = points[3] - points[1];
+            var mianownik = points[2] - points[0];
+            var slope = licznik / mianownik;
+            string result;
+            if (mianownik == 0)
+            {
+                result = "undefined";
+            }
+            else
+                result = slope.ToString();
+
+            return result;
         }
     }
 }
