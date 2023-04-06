@@ -10,7 +10,8 @@ namespace BoolToString
     {
         public static string boolToWord(bool word)
         {
-            i
+            string result = (!word) ? "No" :  "Yes" ;
+            return result;
         }
     }
 }
