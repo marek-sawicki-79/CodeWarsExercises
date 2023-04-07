@@ -13,7 +13,7 @@ namespace Remove1stAndLast
             var sToCharList = s.ToCharArray().ToList();
             sToCharList.RemoveAt(0);
             sToCharList.RemoveAt(sToCharList.Count - 1);
-            var result = sToCharList.ToString(); 
+            var result = new string (sToCharList.ToArray());
             return result;
         }
     }
