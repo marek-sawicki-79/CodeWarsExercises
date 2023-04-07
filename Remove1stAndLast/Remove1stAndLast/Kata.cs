@@ -10,7 +10,10 @@ namespace Remove1stAndLast
     {
         public static string Remove_char(string s)
         {
-            var sToChar = s.ToCharArray();
+            var sToCharList = s.ToCharArray().ToList();
+            sToCharList.RemoveAt(0);
+            sToCharList.RemoveAt(sToCharList.Count - 1);
+            var result = sToCharList.ToString(); 
             return result;
         }
     }
