@@ -10,7 +10,12 @@ namespace StringRrepeat
     {
         public static string RepeatStr(int n, string s)
         {
-            return "";
+            string result = "";
+            for (int i = 1; i <= n; i++)
+            {
+                result += s;
+            }
+            return result;
         }
     }
 }
