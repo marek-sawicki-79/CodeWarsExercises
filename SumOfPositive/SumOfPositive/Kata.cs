@@ -10,8 +10,15 @@ namespace SumOfPositive
     {
         public static int PositiveSum(int[] arr)
         {
-            // Your code here
-            return 0;
+            int positiveSumResult = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > 0)
+                {
+                    positiveSumResult += arr[i];
+                }
+            }
+            return positiveSumResult;
         }
     }
 }
