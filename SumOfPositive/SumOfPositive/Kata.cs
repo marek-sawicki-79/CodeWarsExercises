@@ -10,15 +10,16 @@ namespace SumOfPositive
     {
         public static int PositiveSum(int[] arr)
         {
-            int positiveSumResult = 0;
-            for (int i = 0; i < arr.Length; i++)
-            {
-                if (arr[i] > 0)
-                {
-                    positiveSumResult += arr[i];
-                }
-            }
-            return positiveSumResult;
+            //int positiveSumResult = 0;
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (arr[i] > 0)
+            //    {
+            //        positiveSumResult += arr[i];
+            //    }
+            //}
+            //return positiveSumResult;
+            return arr.Where(x => x > 0).Sum();
         }
     }
 }
