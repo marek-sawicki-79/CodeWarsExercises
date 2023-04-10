@@ -10,14 +10,14 @@ namespace CountOfPositivesSumOfNegatives
     {
         public static int[] CountPositivesSumNegatives(int[] input)
         {
+            if (input == null || input.Length == 0)
+            {
+                return new int[0];
+            }
             int positvieCount = input.Count(b => b > 0);
             int negativeSum = input.Where(b => b < 0).Sum();
             int[] result = new int[0];
-            if (input != null || input.Length != 0)
-            {
-                result = new int[] { positvieCount, negativeSum };
-            }
-            return result;
+            return  new int[] { positvieCount, negativeSum };
         }
     }
 }
