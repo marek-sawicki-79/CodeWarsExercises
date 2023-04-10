@@ -11,7 +11,7 @@ namespace CountOfPositivesSumOfNegatives
         public static int[] CountPositivesSumNegatives(int[] input)
         {
             int positvieCount = input.Count(b => b > 0);
-            int negativeSum = input.Where(b => b > 0).Sum();
+            int negativeSum = input.Where(b => b < 0).Sum();
             int[] result = new int[] { positvieCount, negativeSum };
             return result; 
         }
