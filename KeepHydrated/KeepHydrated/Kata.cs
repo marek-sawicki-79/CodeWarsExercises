@@ -10,8 +10,9 @@ namespace KeepHydrated
     {
         public static int Litres(double time)
         {
-            //The fun begins here.
-            return 0;
+            double perHour = 0.5;
+            int water = (int)Math.Round((Math.Round(time, 0) * perHour), 0);
+            return water;
         }
     }
 }
