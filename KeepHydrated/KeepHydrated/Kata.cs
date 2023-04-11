@@ -11,7 +11,7 @@ namespace KeepHydrated
         public static int Litres(double time)
         {
             double perHour = 0.5;
-            int water = (int)Math.Truncate((Math.Round(time, 0) * perHour));
+            int water = (int)Math.Truncate(time * perHour);
             return water;
         }
     }
