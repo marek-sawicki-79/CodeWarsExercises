@@ -10,16 +10,17 @@ namespace ReturnNegative
     {
         public static int MakeNegative(int number)
         {
-            int result;
-            if (number <= 0)
-            {
-                result = number;
-            }
-            else
-            {
-                result = -number;
-            }
-            return result;
+            //int result;
+            //if (number <= 0)
+            //{
+            //    result = number;
+            //}
+            //else
+            //{
+            //    result = -number;
+            //}
+            //return result;
+            return number > 0 ? -number : number;
         }
     }
 }
