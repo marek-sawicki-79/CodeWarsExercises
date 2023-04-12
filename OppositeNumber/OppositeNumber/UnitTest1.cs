@@ -1,16 +1,14 @@
 namespace OppositeNumber
 {
-    public class Tests
-    {
-        [SetUp]
-        public void Setup()
-        {
-        }
+    using NUnit.Framework;
 
+    [TestFixture]
+    public class MyTest
+    {
         [Test]
-        public void Test1()
+        public void Test_1()
         {
-            Assert.Pass();
+            Assert.AreEqual(-1, Kata.Opposite(1));
         }
     }
 }
