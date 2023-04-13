@@ -10,7 +10,7 @@ namespace NumberToString
     {
         public static string NumberToString(int num)
         {
-            // code here
+            return num.ToString();
         }
     }
 }
