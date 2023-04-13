@@ -10,7 +10,12 @@ namespace GrasshopperSummation
     {
         public static int summation(int num)
         {
-            //Code here
+            int result = 0;
+            for(int i = 1; i <= num; i++)
+            {
+                result = result + i;
+            }
+            return result;
         }
     }
 }
