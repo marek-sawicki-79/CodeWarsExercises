@@ -1,16 +1,17 @@
 namespace GrasshopperSummation
 {
-    public class Tests
+    [TestFixture]
+    public static class KataTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public static void BasicTests()
         {
-            Assert.Pass();
+            Assert.AreEqual(1, Kata.summation(1));
+            Assert.AreEqual(36, Kata.summation(8));
+            Assert.AreEqual(253, Kata.summation(22));
+            Assert.AreEqual(5050, Kata.summation(100));
+            Assert.AreEqual(22791, Kata.summation(213));
         }
     }
+}
 }
