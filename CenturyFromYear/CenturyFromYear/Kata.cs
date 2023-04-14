@@ -10,8 +10,9 @@ namespace CenturyFromYear
     {
         public static int СenturyFromYear(int year)
         {
-
-            return 0;
+            double century = (year / 100);
+            int result = (int)Math.Ceiling(century);
+            return result;
         }
     }
 }
