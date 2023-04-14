@@ -10,7 +10,7 @@ namespace FindTheSmallest
     {
         public static int FindSmallestInt(int[] args)
         {
-
+            return args.Min();
         }
     }
 }
