@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 namespace CountingSheep
 {
     public class Kata
-    {public static int CountSheeps(bool[] sheeps)
-  {
-    //TODO
-  }
+    {
+        public static int CountSheeps(bool[] sheeps)
+        {
+            return sheeps.Where(s => s).Count();
+        }
     }
 }
