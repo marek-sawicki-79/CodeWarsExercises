@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindTheSmallest", "FindTheSmallest\FindTheSmallest.csproj", "{93BDAABC-C8B7-4E27-80F0-6B42CEAC07FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93BDAABC-C8B7-4E27-80F0-6B42CEAC07FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93BDAABC-C8B7-4E27-80F0-6B42CEAC07FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93BDAABC-C8B7-4E27-80F0-6B42CEAC07FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93BDAABC-C8B7-4E27-80F0-6B42CEAC07FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {672E3C2B-E58A-41BC-B74E-86EFA87F93DB}
+	EndGlobalSection
+EndGlobal
