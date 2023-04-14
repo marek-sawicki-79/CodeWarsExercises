@@ -15,7 +15,7 @@ namespace BeginnerLostWoMap
             {
                 result[i] = x[i] * 2;
             }
-            return x;
+            return result;
         }
     }
 }
