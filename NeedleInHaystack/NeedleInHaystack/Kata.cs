@@ -10,7 +10,8 @@ namespace NeedleInHaystack
     {
         public static string FindNeedle(object[] haystack)
         {
-            //Code goes here!
+            int result = Array.IndexOf(haystack, "needle");
+            return $"found the needle at position {result}";
         }
     }
 }
