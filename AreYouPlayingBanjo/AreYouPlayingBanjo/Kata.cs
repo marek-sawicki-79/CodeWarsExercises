@@ -10,7 +10,7 @@ namespace AreYouPlayingBanjo
     {
         public static string AreYouPlayingBanjo(string name)
         {
-            //Implement me
+           return (name.ToLower().StartsWith('r')) ? $"{name} plays banjo" : $"{name} does not play banjo";
         }
     }
 }
