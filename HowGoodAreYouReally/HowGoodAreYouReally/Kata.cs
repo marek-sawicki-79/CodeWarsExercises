@@ -10,7 +10,8 @@ namespace HowGoodAreYouReally
     {
         public static bool BetterThanAverage(int[] ClassPoints, int YourPoints)
         {
-            //Insert brain here
+            double average = ClassPoints.Average();
+            return (average > YourPoints) ? false : true;
         }
     }
 }
