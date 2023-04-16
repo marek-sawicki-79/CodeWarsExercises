@@ -10,7 +10,7 @@ namespace YouOnlyNeedOne
     {
         public static bool Check(object[] a, object x)
         {
-            return false;
+            return a.Contains(x);
         }
     }
 }
