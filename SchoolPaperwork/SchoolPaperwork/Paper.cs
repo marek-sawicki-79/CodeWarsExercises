@@ -10,7 +10,7 @@ namespace SchoolPaperwork
     {
         public static int Paperwork(int n, int m)
         {
-            if (n == 0 || m == 0)
+            if (n < 0 || m < 0)
             {
                 return 0;
             }
