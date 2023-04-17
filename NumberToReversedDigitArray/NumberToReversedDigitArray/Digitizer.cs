@@ -14,11 +14,10 @@ namespace NumberToReversedDigitArray
             long[] digits = new long [digitString.Length];
             for (int i = digitString.Length - 1; i >= 0; i--)
             {
-                for (int j = 0; j < digits.Length; j++)
-                {
-                    digits[j] = long.Parse(digitString.Substring(i, 1));
-                }
+                digits[i] = long.Parse(digitString.Substring(i, 1));
             }
+
+            Array.Reverse(digits, 0, digits.Length);
             return digits;
         }
     }
