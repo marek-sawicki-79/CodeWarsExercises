@@ -10,12 +10,7 @@ namespace DNA_ToRNA_Conversion
     {
         public string dnaToRna(string dna)
         {
-            string rna = "";
-            for (int i = 0; i < dna.Length; i++)
-            {
-                if (dna[i] == 'T') rna += 'U';
-            }
-            return rna;
+           return dna.Replace('T', 'U');
         }
     }
 }
