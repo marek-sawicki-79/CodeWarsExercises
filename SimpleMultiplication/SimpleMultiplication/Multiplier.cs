@@ -10,9 +10,10 @@ namespace SimpleMultiplication
     {
         public static int Multiply(int x)
         {
-            var modulo = x % 2;
-            if (modulo == 0) return x * 8;
-            else return x * 9;
+            //var modulo = x % 2;
+            //if (modulo == 0) return x * 8;
+            //else return x * 9;
+            return (x % 2 == 0) ? x * 8 : x * 9;
         }
     }
 }
