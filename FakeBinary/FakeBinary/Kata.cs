@@ -13,11 +13,11 @@ namespace FakeBinary
             string newX = "";
             for (int i = 0; i < x.Length; i++)
             {
-                if (x[i] < 5)
+                if (x[i] < '5')
                 {
-                    newX = x.Replace(x[i], '0');
+                    newX += '0';
                 }
-                else newX = x.Replace(x[i], '1');
+                else newX += '1';
             }
             return newX;
         }
