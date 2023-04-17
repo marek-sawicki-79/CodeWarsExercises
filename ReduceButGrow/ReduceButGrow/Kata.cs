@@ -10,7 +10,12 @@ namespace ReduceButGrow
     {
         public static int Grow(int[] x)
         {
-            return 0;
+            int result = 1;
+            foreach (int element in x)
+            {
+                result = result * element;
+            }
+            return result;
         }
     }
 }
