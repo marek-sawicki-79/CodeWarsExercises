@@ -10,9 +10,8 @@ namespace JennysSecretMessage
     {
         public static string greet(string name)
         {
-            return "Hello, " + name + "!";
-            if (name == "Johnny")
-                return "Hello, my love!";
+            if (name == "Johnny") return "Hello, my love!";
+            else return "Hello, " + name + "!";
         }
     }
 }
