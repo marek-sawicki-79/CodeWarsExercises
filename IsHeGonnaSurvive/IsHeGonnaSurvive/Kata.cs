@@ -10,7 +10,12 @@ namespace IsHeGonnaSurvive
     {
         public static bool Hero(int bullets, int dragons)
         {
-            //Do Some Magic...
+            if (bullets >= 2 * dragons)
+            {
+                return true;
+            }
+            else
+                return false;
         }
     }
 }
