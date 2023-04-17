@@ -17,7 +17,7 @@ namespace FakeBinary
                 {
                     newX += '0';
                 }
-                else newX += '1';
+                else newX +='1';
             }
             return newX;
         }
