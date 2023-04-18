@@ -14,8 +14,10 @@ namespace SumWoHiAndLo
             {
                 return 0;
             }
+
             int max = 0;
             int min = 0;
+
             try
             {
                 max = numbers.Max();
@@ -25,7 +27,31 @@ namespace SumWoHiAndLo
             {
                 max = min = 0;
             }
-            int sum = numbers.DefaultIfEmpty(0).Where(x => x != max && x != min).Sum();
+
+            int maxCount = 0;
+            int minCount = 0;
+
+            int sum = numbers.DefaultIfEmpty(0).Where(x =>
+            {
+                if (x == max)
+                {
+                    if (maxCount == 0)
+                    {
+                        maxCount++;
+                        return false;
+                    }
+                }
+                else if (x == min)
+                {
+                    if (minCount == 0)
+                    {
+                        minCount++;
+                        return false;
+                    }
+                }
+                return true;
+            }).Sum();
+
             return sum;
         }
     }
