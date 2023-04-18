@@ -10,8 +10,7 @@ namespace StringToArray
     {
         public static string[] StringToArray(string str)
         {
-            string[] strArray = str.Split(' ');
-            return strArray;
+             return str.Split(' ');
         }
     }
 }
