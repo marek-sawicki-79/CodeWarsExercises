@@ -10,7 +10,9 @@ namespace SumWoHiAndLo
     {
         public static int Sum(int[] numbers)
         {
-            return 0;
+            int max = numbers.Max();
+            int min = numbers.Min();
+            return numbers.Sum(x => (x != max && x != min ? x : 0));
         }
     }
 }
