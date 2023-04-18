@@ -10,6 +10,10 @@ namespace SumWoHiAndLo
     {
         public static int Sum(int[] numbers)
         {
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
             int max = 0;
             int min = 0;
             try
@@ -21,7 +25,8 @@ namespace SumWoHiAndLo
             {
                 max = min = 0;
             }
-            return numbers.Sum(x => (x != max && x != min ? x : 0));
+            int sum = numbers.DefaultIfEmpty(0).Where(x => x != max && x != min).Sum();
+            return sum;
         }
     }
 }
