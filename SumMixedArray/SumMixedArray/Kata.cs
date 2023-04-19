@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace SumMixedArray
 {
-    public static int SumMix(object[] x)
+    public class Kata
     {
-        int sum = 0;
-        foreach (object obj in x)
+        public static int SumMix(object[] x)
         {
-            int number = (int)obj;
-            sum += number 
+            int sum = 0;
+            foreach (object obj in x)
+            {
+                string str = obj.ToString();
+                int number = int.Parse((string)str);
+                sum += number;
+            }
+            return sum;
         }
     }
 }
