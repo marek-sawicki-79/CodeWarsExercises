@@ -10,7 +10,7 @@ namespace DoIGetABonus
     {
         public static string bonus_time(int salary, bool bonus)
         {
-            // your code
+            return (bonus == true) ? $"${salary * 10}" : $"${salary}";
         }
     }
 }
