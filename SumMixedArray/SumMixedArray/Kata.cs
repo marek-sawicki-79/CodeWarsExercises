@@ -8,6 +8,11 @@ namespace SumMixedArray
 {
     public static int SumMix(object[] x)
     {
-
+        int sum = 0;
+        foreach (object obj in x)
+        {
+            int number = (int)obj;
+            sum += number 
+        }
     }
 }
