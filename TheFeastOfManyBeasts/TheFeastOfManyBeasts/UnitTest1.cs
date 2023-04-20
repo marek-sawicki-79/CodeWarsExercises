@@ -1,16 +1,19 @@
 namespace TheFeastOfManyBeasts
 {
+    [TestFixture]
     public class Tests
     {
-        [SetUp]
-        public void Setup()
+        [TestCase("great blue heron", "garlic naan")]
+        [TestCase("chickadee", "chocolate cake")]
+        public void BasicTestsTrue(string beast, string dish)
         {
+            Assert.IsTrue(Kata.Feast(beast, dish));
         }
 
-        [Test]
-        public void Test1()
+        [TestCase("brown bear", "bear claw")]
+        public void BasicTestsFalse(string beast, string dish)
         {
-            Assert.Pass();
+            Assert.IsFalse(Kata.Feast(beast, dish));
         }
     }
 }
