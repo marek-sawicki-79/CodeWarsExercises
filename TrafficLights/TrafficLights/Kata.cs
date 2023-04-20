@@ -10,7 +10,7 @@ namespace TrafficLights
     {
         public static string UpdateLight(string current)
         {
-            //Do Some Magic
+            return (current == "green") ? "yellow" : (current == "yellow") ? "red" : (current == "red") ? "green" :null;
         }
     }
 }
