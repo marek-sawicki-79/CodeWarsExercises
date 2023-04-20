@@ -10,17 +10,14 @@ namespace FindFirstNonConsecutiveNumber
     {
         public static object FirstNonConsecutive(int[] arr)
         {
-            int nonConsec = 0;
-            string forNull = "";
-            for(int i = 0; i < arr.Length - 1; i++)
+            for(int i = 1; i < arr.Length; i++)
             {
-                if (arr[i + 1] - arr[i] != 1)
+                if (arr[i] - arr[i -1] != 1)
                 {
-                    nonConsec = arr[i + 1];
+                    return arr[i];
                 }
-                else forNull = null;
             }
-            return (nonConsec != 0) ? nonConsec : forNull;
+            return null;
         }
     }
 }
