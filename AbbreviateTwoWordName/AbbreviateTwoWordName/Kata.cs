@@ -10,7 +10,10 @@ namespace AbbreviateTwoWordName
     {
         public static string AbbrevName(string name)
         {
-            return "";
+            string[] nameSplit = name.Split(' ');
+            char first = nameSplit[0][0];
+            char second = nameSplit[1][0];
+            return $"{first.ToString().ToUpper()}.{second.ToString().ToUpper()}";
         }
     }
 }
