@@ -10,7 +10,7 @@ namespace RemoveStringSpaces
     {
         public static string NoSpace(string input)
         {
-            //Code it!
+            return input.Replace(@" ", "");
         }
     }
 }
