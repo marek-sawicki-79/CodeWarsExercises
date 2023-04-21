@@ -11,7 +11,8 @@ namespace BegginerClock
         public static int Past(int h, int m, int s)
         {
             //return (h * 3600000) + (m * 60000) + (s * 1000);
-            return ((h * 60 + m) * 60 + s) * 1000;
+            //return ((h * 60 + m) * 60 + s) * 1000;
+            return (int)(new TimeSpan(h, m, s)).TotalMilliseconds;
         }
     }
 }
