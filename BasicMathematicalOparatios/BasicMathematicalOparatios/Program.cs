@@ -8,9 +8,9 @@ namespace BasicMathematicalOparatios
 {
     public static class Program
     {
-        public static double basicOp(char operation, double value1, double value2)
+        public static double basicOp(char o, double v1, double v2)
         {
-            return -1;
+            return (o == '+') ? v1 + v2 : (o == '-') ? v1 - v2 : (o == '*') ? v1 * v2 : (o == '/') ? v1 / v2 : 0;
         }
     }
 }
