@@ -10,12 +10,22 @@ namespace OddNoBelowN
     {
         public static ulong OddCount(ulong n)
         {
-            List<ulong> result = new List<ulong>();
-            for (ulong i = 0; i < n; i++)
-            {
-                if (i % 2 != 0) result.Add(i);
-            }
-            return (ulong)result.Count();
+        //    ulong[] result = new [];
+        //    for (ulong i = 0; i < n; i++)
+        //    {
+        //        if (i % 2 != 0) result.Add(i);
+        //    }
+        //    return (ulong)result.Count();
+        //}
+
+        if (n % 2 == 0)
+        {
+            return n / 2;
+        }
+        else
+        {
+            return (n -1) / 2;
         }
     }
+}
 }
