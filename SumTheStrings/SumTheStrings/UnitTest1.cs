@@ -1,16 +1,16 @@
 namespace SumTheStrings
 {
-    public class Tests
+    [TestFixture]
+    public class SolutionTest
     {
-        [SetUp]
-        public void Setup()
+        [Test(Description = "Tests")]
+        public void Tests()
         {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
+            Assert.AreEqual("9", Program.StringsSum("4", "5"));
+            Assert.AreEqual("39", Program.StringsSum("34", "5"));
+            Assert.AreEqual("9", Program.StringsSum("", "9"));
+            Assert.AreEqual("9", Program.StringsSum("9", ""));
+            Assert.AreEqual("0", Program.StringsSum("", ""));
         }
     }
 }
