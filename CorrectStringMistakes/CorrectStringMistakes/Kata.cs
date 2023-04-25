@@ -10,23 +10,28 @@ namespace CorrectStringMistakes
     {
         public static string Correct(string text)
         {
-            Dictionary<char, char> fixMistake = new Dictionary<char, char>()
-            {
-                { '5', 'S' },
-                { '0', 'O' },
-                { '1', 'I' }
+            //Dictionary<char, char> fixMistake = new Dictionary<char, char>()
+            //{
+            //    { '5', 'S' },
+            //    { '0', 'O' },
+            //    { '1', 'I' }
 
-            };
-            StringBuilder result = new StringBuilder();
-            foreach (char c in text)
-            {
-                    if (char.IsDigit(c))
-                    {
-                        result.Append(fixMistake[c]);
-                    }
-                    else result.Append(c);
-            }
-            return result.ToString();
+            //};
+            //StringBuilder result = new StringBuilder();
+            //foreach (char c in text)
+            //{
+            //        if (char.IsDigit(c))
+            //        {
+            //            result.Append(fixMistake[c]);
+            //        }
+            //        else result.Append(c);
+            //}
+            //return result.ToString();
+
+            return text
+                .Replace("0", "O")
+                .Replace("1", "I")
+                .Replace("5", "S");
         }
     }
 }
