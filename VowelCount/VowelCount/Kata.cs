@@ -10,18 +10,19 @@ namespace VowelCount
     {
         public static int GetVowelCount(string str)
         {
-            int vowelCount = 0;
+            //int vowelCount = 0;
 
-            var vowels = new HashSet<char> { 'a', 'e', 'u', 'i', 'o' };
-            for (int i = 0; i < str.Count(); i++)
-            {
-                if (vowels.Contains(str[i]))
-                {
-                    vowelCount++;
-                }
-            }
+            //var vowels = new HashSet<char> { 'a', 'e', 'u', 'i', 'o' };
+            //for (int i = 0; i < str.Count(); i++)
+            //{
+            //    if (vowels.Contains(str[i]))
+            //    {
+            //        vowelCount++;
+            //    }
+            //}
 
-            return vowelCount;
+            //return vowelCount;
+            return str.Count(i => "aeiou".Contains(i));
         }
     }
 }
