@@ -11,18 +11,17 @@ namespace HiAndLo
         public static string HighAndLow(string numbers)
         {
             int[] numbersToo = new int[(numbers.Length + 1) / 2];
+            int i = 0;
             foreach (char number in numbers)
             {
                 if (int.TryParse(number.ToString(), out int result))
                 {
-                    numbersToo.Append(result);
+                    numbersToo[i++] = result;
                 }
-                else
-                {
-                    break;
-                }
+                
             }
-            return "throw towel";
+
+            return $"{numbersToo.Max()} {numbersToo.Min()}";
         }
     }
 }
