@@ -10,15 +10,11 @@ namespace HiAndLo
     {
         public static string HighAndLow(string numbers)
         {
-            int[] numbersToo = new int[(numbers.Length + 1) / 2];
-            int i = 0;
-            foreach (char number in numbers)
+            string[] splittedNumbers = numbers.Split(' ');
+            int[] numbersToo = new int[splittedNumbers.Length];
+            for(int i =0; i<numbersToo.Length; i++)
             {
-                if (int.TryParse(number.ToString(), out int result))
-                {
-                    numbersToo[i++] = result;
-                }
-                
+                numbersToo[i] = int.Parse(splittedNumbers[i]);
             }
 
             return $"{numbersToo.Max()} {numbersToo.Min()}";
