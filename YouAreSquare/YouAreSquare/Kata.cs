@@ -10,7 +10,8 @@ namespace YouAreSquare
     {
         public static bool IsSquare(int n)
         {
-            //Your code goes here!
+            double sqared = Math.Sqrt(n);
+            return (sqared == (int)sqared) ? true : false;
         }
     }
 }
