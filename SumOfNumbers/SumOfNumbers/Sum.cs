@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SumOfNumbers
+{
+    public class Sum
+    {
+        public int GetSum(int a, int b)
+        {
+            int sum = 0;
+            if (a < b)
+            {
+                for (int i = a; i <= b; i++)
+                {
+                    sum += i;
+                }
+            }
+            else
+            {
+                for (int i = b; i <= a; i++)
+                {
+                    sum += i;
+                }
+            }
+            return sum; ;
+        }
+    }
+}
