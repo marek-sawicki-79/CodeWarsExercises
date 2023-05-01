@@ -17,12 +17,14 @@ namespace FindNextPerfectSqare
             }
             else
             {
-                do
+                long nextNumber = num + 1;
+                double newCheck = Math.Sqrt(nextNumber);
+                while (newCheck != (long)newCheck)
                 {
-                    num++;
-                    check = Math.Sqrt(num);
-                }while(check != (long)check);
-                return num;
+                    nextNumber++;
+                    newCheck = Math.Sqrt(nextNumber);
+                }
+                return nextNumber;
             }
         }
     }
