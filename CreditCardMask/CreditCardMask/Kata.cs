@@ -10,6 +10,14 @@ namespace CreditCardMask
     {
         public static string Maskify(string cc)
         {
+            if (cc.Count() <= 4)
+            {
+                return cc;
+            }
+            else
+            {
+                return cc.Remove(0, cc.Length - 4).Insert(0, new string('#', cc.Length - 4));
+            }
         }
     }
 }
