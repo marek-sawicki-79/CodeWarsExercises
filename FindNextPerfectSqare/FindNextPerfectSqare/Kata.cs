@@ -4,28 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace FindNextPerfectSqare
 {
     public class Kata
     {
         public static long FindNextSquare(long num)
         {
-            double check = Math.Sqrt(num);
-            if (check != (long)check)
+            long check = (long)Math.Sqrt(num);
+            long result = 0;
+            if (check * check != num)
             {
                 return -1;
             }
-            else
-            {
-                long nextNumber = num + 1;
-                double newCheck = Math.Sqrt(nextNumber);
-                while (newCheck != (long)newCheck)
-                {
-                    nextNumber++;
-                    newCheck = Math.Sqrt(nextNumber);
-                }
-                return nextNumber;
-            }
+            check++;
+            result = (check * check);
+            return result;
         }
     }
 }
