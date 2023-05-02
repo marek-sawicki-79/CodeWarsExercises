@@ -11,15 +11,13 @@ namespace GrowthOfPopulation
 
         public static int NbYear(int p0, double percent, int aug, int p)
         {
-            int result = 0;
-            double growth = p0;
-            while (growth <= p)
+            int years = 0;
+            while (p0 < p)
             {
-                double increase = growth * percent / 100 + aug;
-                growth += increase;
-                result++;
+                p0 += (int)(p0 * (percent / 100)) + aug;
+                years++;
             }
-            return result;
+            return years;
         }
     }
 }
