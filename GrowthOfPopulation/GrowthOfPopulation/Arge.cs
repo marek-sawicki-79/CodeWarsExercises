@@ -15,8 +15,8 @@ namespace GrowthOfPopulation
             double growth = p0;
             while (growth <= p)
             {
-                growth = growth + (growth * percent / 100) + aug;
-                p0 = (int)growth;
+                double increase = growth * percent / 100 + aug;
+                growth += increase;
                 result++;
             }
             return result;
