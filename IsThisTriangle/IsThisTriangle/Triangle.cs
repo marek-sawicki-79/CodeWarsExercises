@@ -10,7 +10,11 @@ namespace IsThisTriangle
     {
         public static bool IsTriangle(int a, int b, int c)
         {
-            return false;
+            if(a + b > c || c + a > b || c + b > a)
+            {
+                return true;
+            }
+            else  return false;
         }
     }
 }
