@@ -14,7 +14,7 @@ namespace IsThisTriangle
             {
                 return false;
             }
-            else if (a + b > c || c + a > b || (c + b > a && )
+            else if (a + b > c && c + a > b && c + b > a)
             {
                 return true;
             }
