@@ -11,10 +11,11 @@ namespace NoOfPplInBus
         public static int Number(List<int[]> peopleListInOut)
         {
             int peopleLeft = 0;
-            foreach (int[] people in peopleListInOut)
+            foreach (int[] passengersExchangeOnStop in peopleListInOut)
             {
-
+                peopleLeft = peopleLeft + passengersExchangeOnStop[0] - passengersExchangeOnStop[1];
             }
+            return peopleLeft;
         }
     }
 }
