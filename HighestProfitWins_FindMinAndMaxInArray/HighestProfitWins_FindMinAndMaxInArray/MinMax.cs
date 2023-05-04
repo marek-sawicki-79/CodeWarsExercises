@@ -10,7 +10,10 @@ namespace HighestProfitWins_FindMinAndMaxInArray
     {
         public static int[] minMax(int[] lst)
         {
-
+            int[] result = new int[2];
+            result[0] = lst.Min();
+            result[1] = lst.Max();
+            return result;
         }
     }
 }
