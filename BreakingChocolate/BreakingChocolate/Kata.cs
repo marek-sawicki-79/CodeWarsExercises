@@ -10,11 +10,12 @@ namespace BreakingChocolate
     {
         public static int BreakChocolate(int n, int m)
         {
-            if (n == 1 && m == 1) return 0;
-            else if (n <= 0 || m <= 0) return 0;
-            else if (n == 1) return m - 1;
-            else if (m == 1) return n - 1;
-            else return (n - 1) + n * (m - 1);
+            //if (n == 1 && m == 1) return 0;
+            //else if (n <= 0 || m <= 0) return 0;
+            //else if (n == 1) return m - 1;
+            //else if (m == 1) return n - 1;
+            //else return (n - 1) + n * (m - 1);
+            return n + m > 0 ? n * m - 1 : 0;
         }
     }
 }
