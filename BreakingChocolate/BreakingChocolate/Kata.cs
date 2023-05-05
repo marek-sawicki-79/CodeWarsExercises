@@ -10,8 +10,8 @@ namespace BreakingChocolate
     {
         public static int BreakChocolate(int n, int m)
         {
-            //a miracle occurs...
-            return 0;
+            if (n <= 1 && m <= 1) return 0;
+            else return (n - 1) + n * (m - 1);
         }
     }
 }
