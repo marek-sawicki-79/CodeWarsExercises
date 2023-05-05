@@ -12,13 +12,21 @@ namespace CountTheDigit
         public static int NbDig(int n, int d)
         {
             int[] result = new int[n + 1];
-            for (int i = 0; n <= 1; i++)
+            for (int i = 0; i <= n; i++)
             {
                result[i] = i * i;
             }
-            string allTogether = string.Join(", ", result);
+            string allTogether = string.Concat(result);
             int count = 0;
-            foreach(c)
+            char fromD = (char)(d + '0');
+            foreach(char c in allTogether)
+            {
+                if(c == fromD)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
     }
 }
