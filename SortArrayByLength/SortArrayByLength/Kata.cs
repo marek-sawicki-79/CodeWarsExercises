@@ -10,6 +10,7 @@ namespace SortArrayByLength
     {
         public static string[] SortByLength(string[] array)
         {
+            Array.Sort(array, (x, y) => x.Length.CompareTo(y.Length));
             return array;
         }
     }
