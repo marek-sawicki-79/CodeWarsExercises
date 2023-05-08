@@ -10,7 +10,7 @@ namespace SmallEnough_ArrayCheck
     {
         public static bool SmallEnough(int[] a, int limit)
         {
-            return false;
+            return a.All(x => x <= limit);
         }
     }
 }
