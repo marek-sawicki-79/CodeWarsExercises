@@ -12,8 +12,19 @@ namespace FightersFight
         {
             do
             {
-
-            }
+                if (fighter1.Name == firstAttacker)
+                {
+                    fighter2.Health = fighter2.Health - fighter1.DamagePerAttack;
+                    fighter1.Health = fighter1.Health - fighter2.DamagePerAttack;
+                }
+                else
+                {
+                    fighter1.Health = fighter1.Health - fighter2.DamagePerAttack;
+                    fighter2.Health = fighter2.Health - fighter1.DamagePerAttack;
+                }
+            }while (fighter1.Health <= 0 || fighter2.Health <= 0);
+            if (fighter1.Health <= 0) return fighter2.Name;
+            else return fighter1.Name;
         }
     }
 }
