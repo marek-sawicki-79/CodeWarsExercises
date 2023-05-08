@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FightersFight
+{
+    public class Kata
+    {
+        public static string declareWinner(Fighter fighter1, Fighter fighter2, string firstAttacker)
+        {
+            do
+            {
+
+            }
+        }
+    }
+}
