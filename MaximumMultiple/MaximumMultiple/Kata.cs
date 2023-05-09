@@ -10,7 +10,16 @@ namespace MaximumMultiple
     {
         public static int MaxMultiply(int divisor, int bound)
         {
-            //Do some magic
+            int result = 0;
+            for(int i = bound; i >= divisor; i--)
+            {
+                if (i % divisor == 0)
+                {
+                    result = i;
+                    break;
+                }
+            }
+            return result;
         }
     }
 }
