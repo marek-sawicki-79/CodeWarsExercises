@@ -10,7 +10,21 @@ namespace Factorial
     {
         public static int Factorial(int n)
         {
-            return 0;
+            int result = 1;
+            if(n == 0) return result;
+            else if(n<0 ||n > 12)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            else
+            {
+                for (int i = 1; i <= n; i++)
+                {
+                    result = result * i;
+                }
+            }
+            return result;
+
         }
     }
 }
