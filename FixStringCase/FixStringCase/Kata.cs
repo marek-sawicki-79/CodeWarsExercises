@@ -10,7 +10,18 @@ namespace FixStringCase
     {
         public static string Solve(string s)
         {
-            //Do Some Magic
+            int upperCaseCount = 0;
+            int lowerCaseCount = 0;
+            foreach(char c in s)
+            {
+                if (char.IsUpper(c))
+                {
+                    upperCaseCount++;
+                }
+                else lowerCaseCount++;
+            }
+            if (upperCaseCount > lowerCaseCount) return s.ToUpper();
+            else return s.ToLower();
         }
     }
 }
