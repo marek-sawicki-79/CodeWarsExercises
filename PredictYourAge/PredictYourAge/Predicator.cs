@@ -8,9 +8,11 @@ namespace PredictYourAge
 {
     public class Predicter
     {
-        public static int PredictAge(int age1, int age2, int age3, int age4, int age5, int age6, int age7, int age8)
+        public static int PredictAge(int a, int b, int c, int d, int e, int f, int g, int h)
         {
-            return 0;
+            int sumOfSqares =  (a * a) + (b * b) + (c * c) + (d * d) + (e * e) + (f * f) + (g * g) + (h * h);
+            double result = Math.Sqrt(sumOfSqares) / 2;
+            return (int)Math.Floor(result);
         }
     }
 }
