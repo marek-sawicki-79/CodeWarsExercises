@@ -10,7 +10,12 @@ namespace LobeVsFriendship
     {
         public static int WordsToMarks(string str)
         {
-            throw new NotImplementedException();
+            int result = 0;
+            foreach(char c in str)
+            {
+                result += c - 96;
+            }
+            return result;
         }
     }
 }
