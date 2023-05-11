@@ -10,7 +10,20 @@ namespace BuldASqare
     {
         public static string GenerateShape(int n)
         {
-            throw new NotImplementedException();
+            char plus = '+';
+            StringBuilder square = new StringBuilder();
+            for(int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    square.Append(plus);
+                }
+                if(i < n - 1)
+                {
+                    square.Append("\n");
+                }
+            }
+            return square.ToString();
         }
     }
 }
