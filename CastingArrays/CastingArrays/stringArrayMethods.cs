@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,8 @@ public class stringArrayMethods
 {
   public static double[] ToDoubleArray(string[] stringArray)
   {
-            double[] casted = new double[stringArray.Length];
-            for (int i = 0; i < stringArray.Length; i++)
-            {
-                casted[i] = double.Parse(stringArray[i]);
-            }
-            return casted;
+            double[] doubleArray = stringArray.Select(s => double.Parse(s, CultureInfo.InvariantCulture)).ToArray();
+            return doubleArray;
         }
 }
 }
