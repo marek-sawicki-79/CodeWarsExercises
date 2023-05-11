@@ -10,7 +10,12 @@ public class stringArrayMethods
 {
   public static double[] ToDoubleArray(string[] stringArray)
   {
-    return new double[0];
-  }
+            double[] casted = new double[stringArray.Length];
+            for (int i = 0; i < stringArray.Length; i++)
+            {
+                casted[i] = double.Parse(stringArray[i]);
+            }
+            return casted;
+        }
 }
 }
