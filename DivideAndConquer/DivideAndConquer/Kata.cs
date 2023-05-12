@@ -10,7 +10,17 @@ namespace DivideAndConquer
     {
         public static int DivCon(Object[] objArray)
         {
-            return 0;
+            int result = 0;
+            foreach(var number in objArray)
+            {
+                if (number is int)
+                {
+                    result += (int)number;
+                }
+                else
+                    result -= int.Parse(number.ToString());
+            }
+            return result;
         }
     }
 }
