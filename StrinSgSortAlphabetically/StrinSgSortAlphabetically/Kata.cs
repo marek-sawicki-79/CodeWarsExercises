@@ -10,8 +10,7 @@ namespace StrinSgSortAlphabetically
     {
         public static string SortGiftCode(string code)
         {
-            var sorted = code.OrderBy(x => x);
-            return new string(sorted.ToArray());
+            return new string(code.OrderBy(x => x.ToString()).ToArray());
         }
     }
 }
