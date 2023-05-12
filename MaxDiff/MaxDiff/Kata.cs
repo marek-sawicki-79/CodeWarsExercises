@@ -10,8 +10,8 @@ namespace MaxDiff
     {
         public static int MaxDiff(int[] lst)
         {
-            
-            return 0;
+            if (lst.Length == 0 || lst.Length == 1) return 0;
+            else return lst.Max() - lst.Min();
         }
     }
 }
