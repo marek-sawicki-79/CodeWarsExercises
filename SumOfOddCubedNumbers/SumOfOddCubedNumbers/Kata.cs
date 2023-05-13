@@ -10,11 +10,16 @@ namespace SumOfOddCubedNumbers
     {
         public static int CubeOdd(int[] arr)
         {
-
-            // insert code here >.<
-
-
-            return 0;
+            int cubedOddSum = 0;
+            for(int i = 0; i < arr.Length; i++)
+            {
+                    if (arr[i] % 2 != 0)
+                    {
+                        cubedOddSum += (int)Math.Pow(arr[i], 3);
+                    }
+                    else continue;
+            }
+            return cubedOddSum;
         }
     }
 }
