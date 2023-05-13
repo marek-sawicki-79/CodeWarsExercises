@@ -10,7 +10,7 @@ namespace BoiledEggs
     {
         public static int CookingTime(int eggs)
         {
-            // TODO
+            return (int)Math.Ceiling(eggs / 8.0) * 5;
         }
     }
 }
