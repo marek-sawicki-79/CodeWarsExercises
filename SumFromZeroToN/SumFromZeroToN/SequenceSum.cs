@@ -19,7 +19,7 @@ namespace SumFromZeroToN
                 for(int i = 1; i <= n; i++)
                 {
                     sum += i;
-                    result.Concat($"+{i}");
+                    result += $"+{i}";
                 }
                 return result + $" = {sum}";
             }
