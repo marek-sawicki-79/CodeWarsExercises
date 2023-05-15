@@ -10,7 +10,7 @@ namespace LeapYears
     {
         public static bool IsLeapYear(int year)
         {
-            // TODO
+            return (year % 4 != 0) ? false : (year % 400 != 0 && year % 100 == 0) ? false : true;
         }
     }
 }
