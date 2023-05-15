@@ -10,7 +10,8 @@ namespace LeapYears
     {
         public static bool IsLeapYear(int year)
         {
-            return (year % 4 != 0) ? false : (year % 400 != 0 && year % 100 == 0) ? false : true;
+            //return (year % 4 != 0) ? false : (year % 400 != 0 && year % 100 == 0) ? false : true;
+            return DateTime.IsLeapYear(year);
         }
     }
 }
