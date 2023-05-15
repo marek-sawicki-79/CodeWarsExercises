@@ -10,7 +10,13 @@ namespace PowerOfTwo
     {
         public static bool PowerOfTwo(int n)
         {
-            //Math --> Magic
+            double result = n;
+            while(result >= 2)
+            {
+                result = result / 2;
+            }
+            if (result == 1) return true;
+            else return false;
         }
     }
 }
