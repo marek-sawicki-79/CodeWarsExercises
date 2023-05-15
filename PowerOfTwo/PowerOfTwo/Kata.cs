@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +11,14 @@ namespace PowerOfTwo
     {
         public static bool PowerOfTwo(int n)
         {
-            double result = n;
-            while(result >= 2)
-            {
-                result = result / 2;
-            }
-            if (result == 1) return true;
-            else return false;
+            //double result = n;
+            //while(result >= 2)
+            //{
+            //    result = result / 2;
+            //}
+            //if (result == 1) return true;
+            //else return false;
+            return new BigInteger(n).IsPowerOfTwo;
         }
     }
 }
