@@ -10,10 +10,10 @@ namespace CubedSum
     {
         public static long SumCubes(int n)
         {
-            int cubedSum = 0;
-            for (int i = 1; i <= n; i++)
+            long cubedSum = 0;
+            for (long i = 1; i <= n; i++)
             {
-                cubedSum += (int)Math.Pow(i, 3);
+                cubedSum += (long)Math.Pow(i, 3);
             }
             return cubedSum;
         }
