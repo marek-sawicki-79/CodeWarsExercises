@@ -10,7 +10,12 @@ namespace CubedSum
     {
         public static long SumCubes(int n)
         {
-            throw new NotImplementedException();
+            int cubedSum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                cubedSum += (int)Math.Pow(i, 3);
+            }
+            return cubedSum;
         }
     }
 }
