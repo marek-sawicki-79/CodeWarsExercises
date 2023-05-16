@@ -13,9 +13,7 @@ namespace Incrementer
             int[] incrementedNumbers = new int[numbers.Length];
             for (int i = 0; i < numbers.Length; i++)
             {
-                int sum = numbers[i] + i + 1;
-                if (sum < 10) incrementedNumbers[i] = sum;
-                else incrementedNumbers[i] = sum % 10;
+                 incrementedNumbers[i] = (numbers[i] + i + 1) % 10;
             }
             return incrementedNumbers;
         }
