@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplyAllInArray", "MultiplyAllInArray\MultiplyAllInArray.csproj", "{D591FF77-470C-4A7A-8414-F61B1661C95C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D591FF77-470C-4A7A-8414-F61B1661C95C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D591FF77-470C-4A7A-8414-F61B1661C95C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D591FF77-470C-4A7A-8414-F61B1661C95C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D591FF77-470C-4A7A-8414-F61B1661C95C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E19DF5F5-102B-4DB4-9E84-ED6A51BED0F9}
+	EndGlobalSection
+EndGlobal
