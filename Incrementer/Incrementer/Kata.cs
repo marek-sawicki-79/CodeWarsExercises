@@ -10,7 +10,12 @@ namespace Incrementer
     {
         public static int[] Incrementer(int[] numbers)
         {
-            return numbers; // replace with your code ..
+            int[] incrementedNumbers = new int[numbers.Length];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                incrementedNumbers[i] = numbers[i] +i +1;
+            }
+            return incrementedNumbers;
         }
     }
 }
