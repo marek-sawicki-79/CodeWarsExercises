@@ -10,8 +10,8 @@ namespace SortOutMenFromBoys
     {
         public static int[] MenFromBoys(int[] a)
         {
-            List<int> oddNum = new List<int>();
-            List<int> evenNum = new List<int>();
+            HashSet<int> oddNum = new HashSet<int>();
+            HashSet<int> evenNum = new HashSet<int>();
             foreach (int number in a)
             {
                 if(number % 2 != 0)
@@ -23,10 +23,10 @@ namespace SortOutMenFromBoys
                     evenNum.Add(number);
                 }
             }
-            oddNum.Sort((a, b) => b.CompareTo(a));
-            evenNum.Sort();
-            List<int> result = evenNum.Concat(oddNum).ToList();
-            return result.ToArray();
+            int[] sortedEven = evenNum.OrderBy(x => x).ToArray();
+            int[] sortedOdd = oddNum.OrderByDescending(x => x).ToArray();
+            int[] result = sortedEven.Concat(sortedOdd).ToArray();
+            return result;
         }
     }
 }
