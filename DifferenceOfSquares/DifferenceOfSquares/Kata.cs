@@ -10,7 +10,14 @@ namespace DifferenceOfSquares
     {
         public static int DifferenceOfSquares(int n)
         {
-            // ...
+            int sum = 0;
+            int sumOfSquares = 0;
+            for(int i = 1; i <= n; i++)
+            {
+                sum += i;
+                sumOfSquares += i * i;
+            }
+            return sum * sum - sumOfSquares;
         }
     }
 }
