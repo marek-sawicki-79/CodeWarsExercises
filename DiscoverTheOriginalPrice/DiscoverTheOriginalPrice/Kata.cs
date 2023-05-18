@@ -10,7 +10,7 @@ namespace DiscoverTheOriginalPrice
     {
         public static decimal DiscoverOriginalPrice(decimal discountedPrice, decimal salePercentage)
         {
-            //TODO: Some code here!
+            return Math.Round(discountedPrice / (1 -(salePercentage / 100)), 2);
         }
     }
 }
