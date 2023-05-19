@@ -14,14 +14,15 @@ namespace FIXME_GetFullName
         {
             get
             {
-                return firstName + " " + lastName;
+               
+                return $"{firstName} {lastName}";
             }
         }
 
         public Dinglemouse(string firstName, string lastName)
         {
-            firstName = firstName;
-            lastName = lastName;
+            this.firstName = firstName;
+            this.lastName = lastName;
         }
     }
 }
