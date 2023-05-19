@@ -14,8 +14,9 @@ namespace FIXME_GetFullName
         {
             get
             {
-               
-                return $"{firstName} {lastName}";
+                if (firstName == "") return lastName;
+                else if (lastName == "") return firstName;
+                else return $"{firstName} {lastName}";
             }
         }
 
