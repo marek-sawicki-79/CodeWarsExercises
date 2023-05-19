@@ -10,7 +10,7 @@ namespace FindLuckyNumbers
     {
         public static int[] FilterLucky(int[] x)
         {
-            return new int[] { "lucky numbers" };
+            return x.Where(n => n.ToString().Contains("7")).ToArray();
         }
     }
 }
