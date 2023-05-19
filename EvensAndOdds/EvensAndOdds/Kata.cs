@@ -10,7 +10,7 @@ namespace EvensAndOdds
     {
         public static string EvensAndOdds(int num)
         {
-            throw new NotImplementedException();
+            return(num % 2 == 0) ? Convert.ToString(num, 2) : num.ToString("x");
         }
     }
 }
