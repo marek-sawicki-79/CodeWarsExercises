@@ -10,9 +10,13 @@ namespace HouseNumbersSum
     {
         public int HouseNumbersSum(int[] inputArray)
         {
-            //coding and coding..
-
-
+            int houseSum = 0;
+            foreach(int number in inputArray)
+            {
+                if (number != 0) houseSum += number;
+                else break;
+            }
+            return houseSum;
         }
     }
 }
