@@ -10,7 +10,9 @@ namespace CatAndMouse
     {
         public static string CatMouse(string x)
         {
-            // Your code here...
+            var mousePosition = x.IndexOf('m');
+            var catPosition = x.IndexOf('C');
+            return (mousePosition - catPosition > 3) ? "Escaped!" : "Caught!";
         }
     }
 }
