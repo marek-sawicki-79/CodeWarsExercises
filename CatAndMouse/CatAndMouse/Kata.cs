@@ -10,9 +10,13 @@ namespace CatAndMouse
     {
         public static string CatMouse(string x)
         {
-            var mousePosition = x.IndexOf('m');
-            var catPosition = x.IndexOf('C');
-            return (mousePosition - catPosition > 3) ? "Escaped!" : "Caught!";
+            int count = 0;
+            foreach(char c in x)
+            {
+                if (c == '.') count++;
+            }
+            if(count > 3) return "Escaped!";
+            else return "Caught!";
         }
     }
 }
