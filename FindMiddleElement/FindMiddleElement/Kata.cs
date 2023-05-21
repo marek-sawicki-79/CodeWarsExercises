@@ -10,7 +10,6 @@ namespace FindMiddleElement
     {
         public static int Gimme(double[] x)
         {
-            double result = 0.0;
             if ((x[0] > x[1] && x[0] < x[2]) || (x[0] < x[1] && x[0] > x[2])) return 0;
             else if ((x[1] > x[0] && x[1] < x[2]) || (x[1] < x[0] && x[1] > x[2])) return 1;
             else return 2;
