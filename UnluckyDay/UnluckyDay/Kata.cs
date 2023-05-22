@@ -10,7 +10,18 @@ namespace UnluckyDay
     {
         public static int UnluckyDays(int year)
         {
-            return 0;
+            List<DateTime> days = new List<DateTime>();
+            DateTime startDate = new DateTime(year, 1, 1);
+            DateTime endDate = new DateTime(year, 12, 31);
+
+            for(DateTime date = startDate; date <= endDate; date = date.AddDays(1))
+            {
+                if(date.DayOfWeek == DayOfWeek.Friday && date.Day == 13)
+                {
+                    days.Add(date);
+                }
+            }
+            return days.Count;
         }
     }
 }
