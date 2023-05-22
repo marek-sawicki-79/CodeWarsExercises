@@ -10,7 +10,18 @@ namespace ClosestMultipleOf10
     {
         public int ClosestMultiple10(int num)
         {
-            return num;
+            int down = num;
+            int up = num;
+            while (down % 10 != 0)
+            {
+                down--;
+            }
+            while (up % 10 != 0)
+            {
+                up++;
+            }
+
+            return ((up - num) < (num - down)) ? up : down;
         }
     }
 }
