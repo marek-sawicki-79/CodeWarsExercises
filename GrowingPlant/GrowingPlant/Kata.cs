@@ -11,18 +11,16 @@ namespace GrowingPlant
         public int GrowingPlant(int UpSpeed, int DownSpeed, int DesiredHeight)
         {
             int daysCount = 0;
-
-            for (int i =0; i <= DesiredHeight; i += UpSpeed)
+            int currentHeight = 0;
+            while(currentHeight < DesiredHeight)
             {
-                if(i == 0)
+                currentHeight += UpSpeed;
+                daysCount++;
+                if (currentHeight >= DesiredHeight)
                 {
-                    daysCount++;
+                    break;
                 }
-                else
-                {
-                    i -= UpSpeed;
-                    daysCount++;
-                }
+                currentHeight -= DownSpeed;
             }
             return daysCount;
         }
