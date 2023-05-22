@@ -10,7 +10,13 @@ namespace Digitize
     {
         public static int[] digitize(int n)
         {
-            return new int[] { };
+            string number = n.ToString();
+            int[] digits = new int[number.Length];
+            for(int i = 0; i < number.Length; i++)
+            {
+                digits[i] = int.Parse(number[i].ToString());
+            }
+            return digits;
         }
     }
 }
