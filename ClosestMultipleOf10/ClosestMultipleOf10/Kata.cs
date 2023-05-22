@@ -20,8 +20,7 @@ namespace ClosestMultipleOf10
             {
                 up++;
             }
-
-            return ((up - num) < (num - down)) ? up : down;
+            return ((up - num) <= (num - down)) ? up : down;
         }
     }
 }
