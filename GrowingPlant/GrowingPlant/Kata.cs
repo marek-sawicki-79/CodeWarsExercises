@@ -10,9 +10,21 @@ namespace GrowingPlant
     {
         public int GrowingPlant(int UpSpeed, int DownSpeed, int DesiredHeight)
         {
-            //coding and coding..
+            int daysCount = 0;
 
-
+            for (int i =0; i <= DesiredHeight; i += UpSpeed)
+            {
+                if(i == 0)
+                {
+                    daysCount++;
+                }
+                else
+                {
+                    i -= UpSpeed;
+                    daysCount++;
+                }
+            }
+            return daysCount;
         }
     }
 }
