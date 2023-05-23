@@ -12,7 +12,7 @@ namespace BandNameGenerator
         {
             if (str[0] != str[str.Length - 1])
             {
-                return char.ToUpper(str[0]) + str.Substring(1);
+                return $"The {char.ToUpper(str[0])}{str.Substring(1)}";
             }
             else
             {
