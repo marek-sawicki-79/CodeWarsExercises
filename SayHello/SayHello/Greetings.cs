@@ -10,7 +10,8 @@ namespace SayHello
     {
         public static string greet(string name)
         {
-            //Here add your greet code
+            if (string.IsNullOrEmpty(name)) return null;
+            else return $"hello {name}!";
         }
     }
 }
