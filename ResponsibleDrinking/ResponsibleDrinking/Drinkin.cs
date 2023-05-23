@@ -10,8 +10,15 @@ namespace ResponsibleDrinking
     {
         public string hydrate(string drinkString)
         {
-            // Insert party here
-            return "";
+            int sum = 0;
+            foreach (char c in drinkString)
+            {
+                if (int.TryParse(c.ToString(), out int drinks))
+                {
+                    sum += drinks;
+                }
+            }
+            return (sum == 1) ? $"{sum} glass of water" : $"{sum} glasses of water";
         }
     }
 }
