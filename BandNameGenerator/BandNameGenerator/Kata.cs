@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace BandNameGenerator
 {
-    public static string BandNameGenerator(string str)
+    public class Kata
     {
-        // Happy coding
+        public static string BandNameGenerator(string str)
+        {
+            if (str[0] != str[str.Length - 1])
+            {
+                return char.ToUpper(str[0]) + str.Substring(1);
+            }
+            else
+            {
+                return char.ToUpper(str[0]) + str.Substring(1) + str.Substring(1);
+            }
+        }
     }
 }
