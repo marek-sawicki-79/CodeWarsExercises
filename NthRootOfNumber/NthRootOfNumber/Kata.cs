@@ -10,7 +10,7 @@ namespace NthRootOfNumber
     {
         public static double FindRoot(double x, int n)
         {
-
+            return Math.Pow(x, 1.0 / n);
         }
     }
 }
