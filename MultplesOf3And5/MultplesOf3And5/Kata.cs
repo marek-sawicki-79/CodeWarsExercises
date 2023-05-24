@@ -10,20 +10,24 @@ namespace MultplesOf3And5
     {
         public static int Solution(int value)
         {
-            List<int> divisibles = new List<int>();
+            int sum = 0;
             for(int i = 3; i < value; i++)
             {
-               if (i % 3 == 0)
-               {
-                    divisibles.Add(i);
-               }
-               else if (i % 5 == 0)
-               {
-                    if (!divisibles.Contains(i)) divisibles.Add(i);
-               }
+                if(i % 3 == 0 && i % 5 ==0)
+                {
+                    sum += i;
+                }
+                else if (i % 3 == 0 && i % 5 != 0)
+                {
+                    sum += i;
+                }
+                else if (i % 3 != 0 && i % 5 == 0)
+                {
+                    sum += i;
+                }
             }
-            int sum = divisibles.Sum();
             return sum;
+
         }
     }
 }
