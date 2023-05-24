@@ -10,7 +10,23 @@ namespace MultplesOf3And5
     {
         public static int Solution(int value)
         {
-            // Magic Happens
+            int sum = 0;
+            for(int i = 3; i <= value; i++)
+            {
+                if(i % 3 == 0 && i % 5 ==0)
+                {
+                    sum += i;
+                }
+                else if (i % 3 == 0 && i % 5 != 0)
+                {
+                    sum += i;
+                }
+                else if (i % 3 != 0 && i % 5 == 0)
+                {
+                    sum += i;
+                }
+            }
+            return sum;
         }
     }
 }
