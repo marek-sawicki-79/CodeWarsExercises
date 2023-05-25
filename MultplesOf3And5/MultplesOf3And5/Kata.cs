@@ -27,7 +27,6 @@ namespace MultplesOf3And5
                 }
             }
             return sum;
-
         }
     }
 }
