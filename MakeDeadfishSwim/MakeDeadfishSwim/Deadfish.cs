@@ -10,7 +10,28 @@ namespace MakeDeadfishSwim
     {
         public static int[] Parse(string data)
         {
-            // Return the output array, and ignore all non-op characters
+            List<int> parser = new List<int>();
+            int fish = 0;
+            foreach(char c in data)
+            {
+                if(c == 'i')
+                {
+                    fish++;
+                }
+                else if(c == 'd')
+                {
+                    fish--;
+                }
+                else if(c == 's')
+                {
+                    fish *= fish;
+                }
+                else if (c == 'o')
+                {
+                    parser.Add(fish);
+                }
+            }
+            return parser.ToArray();
         }
     }
 }
