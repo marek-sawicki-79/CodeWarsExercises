@@ -10,7 +10,16 @@ namespace IsItPrime
     {
         public static bool IsPrime(int n)
         {
-            return false; // TODO
+            if (n < 2) return false;
+            int sqrt = (int)Math.Sqrt(n);
+            for(int i = 2; i <= sqrt; i++)
+            {
+                if (n % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

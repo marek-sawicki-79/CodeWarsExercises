@@ -17,4 +17,3 @@ namespace IsItPrime
         public bool SampleTest(int n) => Kata.IsPrime(n);
     }
 }
-}
