@@ -10,14 +10,20 @@ namespace CountDivisibleNumbers
     {
         public static long DivisibleCount(long x, long y, long k)
         {
-            long divisibles = 0;
-            for(long i = x; i<=y; i++)
-            {
-                if(i % k == 0)
-                {
-                    divisibles++;
-                }
-            }
+            //long divisibles = 0;
+            //for(long i = x; i<=y; i++)
+            //{
+            //    if(i % k == 0)
+            //    {
+            //        divisibles++;
+            //    }
+            //}
+            //return divisibles;
+
+            long startNum = ((x + k - 1) / k) * k;
+            long endNum = (y / k) * k;
+            long divisibles = ((endNum - startNum) / k) + 1;
+            
             return divisibles;
         }
     }
