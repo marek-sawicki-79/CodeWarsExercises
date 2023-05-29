@@ -10,7 +10,16 @@ namespace SumOfSequenceHardEdition
     {
         public static long SequenceSum(long start, long end, long step)
         {
-            return -1;
+            long sequenceSum = 0;
+            if (start > end) return 0;
+            else
+            {
+                for (long i = start; i <= end; i += step)
+                {
+                    sequenceSum += i;
+                }
+                return sequenceSum;
+            }
         }
     }
 }
