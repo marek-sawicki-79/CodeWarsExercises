@@ -10,9 +10,10 @@ namespace CountTheDays
     {
         public string countDays(DateTime d)
         {
-            TimeSpan days = d - DateTime.Now.Date;
+            TimeSpan days = d - DateTime.Now;
+            int result = (int)Math.Round(days.TotalDays);
             return (d.Date < DateTime.Now.Date) ? "The day is in the past!" :
-                (d.Date == DateTime.Now.Date) ? "Today is the day!" : days.Days.ToString();
+                (d.Date == DateTime.Now.Date) ? "Today is the day!" : $"{result} days";
         }
     }
 }
