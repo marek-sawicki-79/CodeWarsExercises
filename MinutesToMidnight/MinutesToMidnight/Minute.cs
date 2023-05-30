@@ -10,12 +10,12 @@ namespace MinutesToMidnight
     {
         public string countMinutes(DateTime d)
         {
-            DateTime midnight = DateTime.Today;
-            midnight = midnight.Date;
-            TimeSpan minutesLeft = midnight - d;
-            if (minutesLeft.ToString() == "1")
-            return $"{minutesLeft.TotalMinutes.ToString()} minute";
-            else return $"{minutesLeft.TotalMinutes.ToString()} minutes";
+            DateTime midnight = DateTime.Today + TimeSpan.FromHours(24);
+            TimeSpan minutesLeft = d - midnight;
+            var minutes = Math.Round(Math.Abs(minutesLeft.TotalMinutes));
+            if (minutes == 1)
+            return $"{minutes} minute";
+            else return $"{minutes} minutes";
         }
     }
 }
