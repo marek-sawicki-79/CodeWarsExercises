@@ -11,9 +11,10 @@ namespace HandshakeProblem
         public static int GetParticipants(int handshakes)
         {
             if (handshakes <= 0) return 0;
-            if (handshakes == 1) return 2;
-            double participants = Math.Ceiling((Math.Sqrt(8 * handshakes + 1) - 1) / 2);
-            return (int)participants;
+            int k;
+            int i;
+            for ( i = 0, k = 1; i < handshakes; i += k++) ;
+            return k;
         }
     }
 }
