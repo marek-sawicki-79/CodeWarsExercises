@@ -16,7 +16,8 @@ namespace SortMyAnimals
     {
         public List<Animal> Sort(List<Animal> input)
         {
-            return input.OrderBy(a => a.NumberOfLegs).ThenBy(b => b.Name).ToList();
+            if (input == null || input.Count == 0) return input;
+            else return input.OrderBy(a => a.NumberOfLegs).ThenBy(b => b.Name).ToList();
         }
     }
 }
