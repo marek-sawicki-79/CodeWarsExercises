@@ -10,7 +10,10 @@ namespace RankVector
     {
         public static int[] Ranks(int[] ranks)
         {
-            return new int[0];
+            int[] sorted = ranks.ToArray();
+            Array.Sort(sorted, (x, y) => y.CompareTo(x));
+            return ranks.Select(v => Array.IndexOf(sorted, v) + 1).ToArray();
         }
     }
 }
+
