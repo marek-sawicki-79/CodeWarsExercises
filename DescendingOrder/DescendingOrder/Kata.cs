@@ -10,8 +10,10 @@ namespace DescendingOrder
     {
         public static int DescendingOrder(int num)
         {
-            // Bust a move right here
-            return 0;
+            string digits = num.ToString();
+            char[] sortedNums = digits.OrderByDescending(x => x).ToArray();
+            string sortedNum = new string(sortedNums);
+            return int.Parse(sortedNum);
         }
     }
 }
