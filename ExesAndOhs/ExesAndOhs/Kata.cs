@@ -10,7 +10,12 @@ namespace ExesAndOhs
     {
         public static bool XO(string input)
         {
-            return //Code it!
-  }
+            char exes = 'x';
+            char ohs = 'o';
+            int xCount = input.ToLower().Count(c => c == exes);
+            int oCount = input.ToLower().Count(c => c == ohs);
+            if (xCount == oCount) return true;
+            else return false;
+        }
     }
 }
