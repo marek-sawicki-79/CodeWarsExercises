@@ -10,7 +10,7 @@ namespace Isograms
     {
         public static bool IsIsogram(string str)
         {
-            // Code on you crazy diamond!
+            return str.ToLower().GroupBy(c => c).All(l => l.Count() == 1);
         }
     }
 }
