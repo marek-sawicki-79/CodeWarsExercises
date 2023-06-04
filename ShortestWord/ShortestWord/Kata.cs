@@ -10,7 +10,8 @@ namespace ShortestWord
     {
         public static int FindShort(string s)
         {
-            return 0;
+            string[] sSplit = s.Split(' ');
+            return sSplit.Min(s => s.Length);
         }
     }
 }
