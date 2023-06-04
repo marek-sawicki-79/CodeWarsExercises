@@ -10,7 +10,8 @@ namespace Isograms
     {
         public static bool IsIsogram(string str)
         {
-            return str.ToLower().GroupBy(c => c).All(l => l.Count() == 1);
+            //return str.ToLower().GroupBy(c => c).All(l => l.Count() == 1);
+            return str.ToLower().Distinct().Count() == str.Length;
         }
     }
 }
