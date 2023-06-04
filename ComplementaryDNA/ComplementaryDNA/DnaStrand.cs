@@ -10,7 +10,27 @@ namespace ComplementaryDNA
     {
         public static string MakeComplement(string dna)
         {
-            //Your code
+            StringBuilder nucleotidePairs = new StringBuilder();
+            foreach(char c in dna)
+            {
+                if (c == 'A')
+                {
+                    nucleotidePairs.Append('T');
+                }
+                else if (c == 'C')
+                {
+                    nucleotidePairs.Append('G');
+                }
+                else if (c == 'T')
+                {
+                    nucleotidePairs.Append('A');
+                }
+                else if (c == 'G')
+                {
+                    nucleotidePairs.Append('C');
+                }
+            }
+            return nucleotidePairs.ToString();
         }
     }
 }
