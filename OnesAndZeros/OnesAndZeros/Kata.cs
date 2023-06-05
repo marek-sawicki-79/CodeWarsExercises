@@ -10,7 +10,14 @@ namespace OnesAndZeros
     {
         public static int binaryArrayToNumber(int[] BinaryArray)
         {
-            //Code here
+            int result = 0;
+            int powerOf2 = BinaryArray.Length - 1;
+            foreach(int bit in BinaryArray)
+            {
+                result += bit * (int)Math.Pow(2, powerOf2);
+                powerOf2--;
+            }
+            return result;
         }
     }
 }
