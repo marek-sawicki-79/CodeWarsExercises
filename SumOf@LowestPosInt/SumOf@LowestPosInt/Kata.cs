@@ -10,8 +10,8 @@ namespace SumOf_LowestPosInt
 	{
 		public static int sumTwoSmallestNumbers(int[] numbers)
 		{
-			//Code here...
-			return 0;
+			Array.Sort(numbers);
+			return numbers[0] + numbers[1];
 		}
 	}
 }
