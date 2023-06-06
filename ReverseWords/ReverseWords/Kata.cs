@@ -10,7 +10,17 @@ namespace ReverseWords
 	{
 		public static string ReverseWords(string str)
 		{
-			//Write your code here
+			string[] splitString = str.Split(' ');
+			List<string> reversedWords = new List<string>();
+			foreach(string word in splitString)
+            {
+				char[] wordToArray = word.ToCharArray();
+				Array.Reverse(wordToArray);
+				string reversedWord = new string(wordToArray);
+				reversedWords.Add(reversedWord);
+            }
+			string result = string.Join(' ', reversedWords);
+			return result;
 		}
 	}
 }
