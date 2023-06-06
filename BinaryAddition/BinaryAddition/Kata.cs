@@ -10,7 +10,7 @@ namespace BinaryAddition
     {
         public static string AddBinary(int a, int b)
         {
-            // your code ...
+            return Convert.ToString((a + b), 2);
         }
     }
 }
