@@ -10,7 +10,9 @@ namespace OddOrEven
     {
         public static string OddOrEven(int[] array)
         {
-            //enter code here
+            int sum = array.Sum();
+            if (array.Length == 1 && array[0] == 0) return "even";
+            else return (sum % 2 == 0) ? "even" : "odd";
         }
     }
 }
