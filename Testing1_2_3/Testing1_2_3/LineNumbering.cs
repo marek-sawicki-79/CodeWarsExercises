@@ -10,7 +10,10 @@ namespace Testing1_2_3
     {
         public static List<string> Number(List<string> lines)
         {
-            //your code goes here
+            for (int i = 0; i < lines.Count; i++)
+            {
+                lines[i] = $"{i + 1}: {lines[i]}";
+            }
             return lines;
         }
     }
