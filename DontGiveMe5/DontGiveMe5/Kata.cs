@@ -10,7 +10,15 @@ namespace DontGiveMe5
     {
         public static int DontGiveMeFive(int start, int end)
         {
-            return 0;
+            List<int> numbers = new List<int>();
+            for (int i = start; i <= end; i++)
+            {
+                if (!i.ToString().Contains("5"))
+                {
+                    numbers.Add(i);
+                }
+            }
+            return numbers.Count;
         }
     }
 }
