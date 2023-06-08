@@ -10,8 +10,21 @@ namespace DoArithmeticFromStringCommand
     {
         public static double Arithmetic(double a, double b, string op)
         {
-            return (op == "add") ? a + b : (op == "subtract") ? a - b : (op == "multiply")
-                ? a * b : (op == "divide") ? a / b : 404;
+            //return (op == "add") ? a + b : (op == "subtract") ? a - b : (op == "multiply")
+            //    ? a * b : (op == "divide") ? a / b : 404;
+            switch (op)
+            {
+                case "add":
+                    return a + b;
+                case "subtract":
+                    return a - b;
+                case "multiply":
+                    return a * b;
+                case "divide":
+                    return a / b;
+                default:
+                    return Double.NaN;
+            }
         }
     }
 }
