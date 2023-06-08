@@ -10,7 +10,8 @@ namespace DoArithmeticFromStringCommand
     {
         public static double Arithmetic(double a, double b, string op)
         {
-            throw new NotImplementedException();
+            return (op == "add") ? a + b : (op == "subtract") ? a - b : (op == "multiply")
+                ? a * b : (op == "divide") ? a / b : 404;
         }
     }
 }
