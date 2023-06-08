@@ -13,7 +13,8 @@ namespace MoneyX3
             int years = 0;
             while(principal < desiredPrincipal)
             {
-                principal = principal + (principal * interest) - (principal * interest * tax);
+                //principal = principal + (principal * interest) - (principal * interest * tax);
+                principal += principal * interest * (1 - tax);
                 years++;
             }
             return years;
