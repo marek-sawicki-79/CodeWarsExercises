@@ -10,7 +10,8 @@ namespace RoundUpTo5
     {
         public static int RoundToNext5(int n)
         {
-            //Your code goes here...
+            while(n % 5 != 0) n++;
+            return n;
         }
     }
 }
