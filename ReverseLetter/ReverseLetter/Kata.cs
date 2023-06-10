@@ -10,9 +10,9 @@ namespace ReverseLetter
     {
         public string ReverseLetter(string str)
         {
-            //coding and coding..
-
-
+            char[] jinx = str.ToCharArray();
+            Array.Reverse(jinx);
+            return new string(jinx.Where(c => char.IsLetter(c)).ToArray());
         }
     }
 }
