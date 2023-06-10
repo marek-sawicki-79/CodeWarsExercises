@@ -10,7 +10,12 @@ namespace SortNumbers
     {
         public static int[] SortNumbers(int[] nums)
         {
-            return nums;
+            if (nums == null) return new int[0];
+            else
+            {
+                Array.Sort(nums);
+                return nums;
+            }
         }
     }
 }
