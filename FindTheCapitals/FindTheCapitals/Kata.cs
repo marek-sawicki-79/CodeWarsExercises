@@ -10,7 +10,18 @@ namespace FindTheCapitals
 	{
 		public static int[] Capitals(string word)
 		{
-			//Write your code here
+            char[] wordArr = word.ToCharArray();
+			List<int> capitalIndex = new List<int>();
+			int index = 0;
+			foreach(char c in wordArr)
+            {
+                if (char.IsUpper(c))
+                {
+					capitalIndex.Add(index);
+				}
+				index++;
+			}
+			return capitalIndex.ToArray();
 		}
 	}
 }
