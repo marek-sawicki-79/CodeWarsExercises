@@ -10,7 +10,13 @@ namespace NumberOfDecimalDigits
     {
         public static int Digits(ulong n)
         {
-            return 0;
+            int digitsCount = 0;
+            string nString = n.ToString();
+            foreach(char c in nString)
+            {
+                if(char.IsDigit(c)) digitsCount++;
+            }
+            return digitsCount;
         }
     }
 }
