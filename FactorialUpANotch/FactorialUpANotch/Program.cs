@@ -8,9 +8,18 @@ namespace FactorialUpANotch
 {
     public static class Program
     {
-        public static ulong factorial(int n)
+        public static ulong Factorial(int n)
         {
-            return 1;
+            if(n == 0) return 1;
+            else
+            {
+                ulong result = 1;
+                for (int i = 1; i <= n; i++)
+                {
+                    result *= (ulong)i;
+                }
+                return result;
+            }
         }
     }
 }
