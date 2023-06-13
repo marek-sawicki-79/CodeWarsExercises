@@ -10,7 +10,9 @@ namespace AutomorphicNumber
     {
         public static string Automorphic(int n)
         {
-            //Do Some Magic
+            int squared = n * n;
+            if (squared % 10 == n % 10) return "Automorphic";
+            else return "Not!!";
         }
     }
 }
