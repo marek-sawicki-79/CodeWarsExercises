@@ -11,7 +11,8 @@ namespace AutomorphicNumber
         public static string Automorphic(int n)
         {
             int squared = n * n;
-            if (squared % 10 == n % 10) return "Automorphic";
+            int power = n.ToString().Length;
+            if (squared % Math.Pow(10, power) == n) return "Automorphic";
             else return "Not!!";
         }
     }
