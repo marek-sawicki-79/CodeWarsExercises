@@ -10,8 +10,13 @@ namespace AllUnique
     {
         public static bool HasUniqueChars(string str)
         {
-            //TODO
-            return false;
+            char[]charArr = str.ToCharArray();
+            Array.Sort(charArr);
+            for(int i = 1; i < str.Length; i++)
+            {
+                if (charArr[i] == charArr[i - 1]) return false;
+            }
+            return true;
         }
     }
 }
