@@ -10,7 +10,15 @@ namespace FilterTheNumber
     {
         public static int FilterString(string s)
         {
-            //Your code goes here
+            string result = "";
+            for(int i = 0; i < s.Length; i++)
+            {
+                if (char.IsDigit(s[i]))
+                {
+                    result += s[i];
+                }
+            }
+            return int.Parse(result);
         }
     }
 }
