@@ -10,7 +10,23 @@ namespace TidyNumber
     {
         public static bool TidyNumber(int n)
         {
-            //Do Some Magic
+            char[] digits = n.ToString().ToCharArray();
+            int[] numbers = new int[digits.Length];
+            for(int i = 0; i < digits.Length; i++)
+            {
+                numbers[i] = int.Parse(digits[i].ToString());
+            }
+            bool result = false;
+            for (int j = 1; j < numbers.Length; j++)
+            {
+                if (numbers[j] >= numbers[j - 1]) result = true;
+                else
+                {
+                    result = false;
+                    break;
+                }
+            }
+            return result;
         }
     }
 }
