@@ -13,11 +13,7 @@ namespace IndexedCapitalization
             char[] charArr = s.ToCharArray();
             foreach(int index in idxs)
             {
-                if(index > charArr.Length)
-                {
-                    break;
-                }
-                else
+                if(index >= 0 && index < charArr.Length)
                 {
                     charArr[index] = char.ToUpper(charArr[index]);
                 }
