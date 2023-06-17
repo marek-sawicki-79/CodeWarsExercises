@@ -5,18 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Greatest_CommonDivisor
-{ 
-public class Kata
 {
-    public static int Gcd(int a, int b)
+    public class Kata
     {
-            while (b != 0)
-            {
-                int temp = b;
-                b = a % b;
-                a = temp;
-            }
-            return a;
+        public static int Gcd(int a, int b)
+        {
+                //while (b != 0)
+                //{
+                //    int temp = b;
+                //    b = a % b;
+                //    a = temp;
+                //}
+                //return a;
+                return a % b == 0 ? b : Gcd (b, a % b);
         }
-}
+    }
 }
