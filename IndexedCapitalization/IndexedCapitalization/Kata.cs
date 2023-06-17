@@ -10,7 +10,19 @@ namespace IndexedCapitalization
     {
         public static string Capitalize(string s, List<int> idxs)
         {
-            throw new NotImplementedException();
+            char[] charArr = s.ToCharArray();
+            foreach(int index in idxs)
+            {
+                if(index > charArr.Length)
+                {
+                    break;
+                }
+                else
+                {
+                    charArr[index] = char.ToUpper(charArr[index]);
+                }
+            }
+            return new string(charArr);
         }
     }
 }
