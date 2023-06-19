@@ -10,16 +10,21 @@ namespace LastSurvivor
     {
         public static string LastSurvivor(string letters, int[] coords)
         {
-            List<char> chars = new List<char>(letters);
-            for (int i = 0; i < coords.Length; i++)
-            {
-                int index = coords[i];
-                if(index >= 0 && index < chars.Count)
-                {
-                    chars.RemoveAt(index);
-                }
-            }
-            return new String(chars.ToArray());
+            //List<char> chars = new List<char>(letters);
+            //for (int i = 0; i < coords.Length; i++)
+            //{
+            //    int index = coords[i];
+            //    if(index >= 0 && index < chars.Count)
+            //    {
+            //        chars.RemoveAt(index);
+            //    }
+            //}
+            //return new String(chars.ToArray());
+
+            foreach (var index in coords)
+                letters = letters.Remove(index, 1);
+
+            return letters;
         }
     }
 }
