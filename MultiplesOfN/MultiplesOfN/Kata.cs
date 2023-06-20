@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace MultiplesOfN
 {
-    public static double[] Multiples(int m, double n)
+    public class Kata
     {
-        // code here
+        public static double[] Multiples(int m, double n)
+        {
+            // code here
+        }
     }
 }
