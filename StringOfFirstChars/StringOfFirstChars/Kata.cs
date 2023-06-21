@@ -10,7 +10,13 @@ namespace StringOfFirstChars
     {
         public static string MakeString(string s)
         {
-            return myString;
+            string[] toGet = s.Split(' ');
+            List<char> chars = new List<char>();
+            foreach (string word in toGet)
+            {
+                chars.Add(word[0]);
+            }
+            return new string(chars.ToArray());
         }
     }
 }
