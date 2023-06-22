@@ -10,7 +10,7 @@ namespace AverageScores
     {
         public static int Average(int[] scores)
         {
-            return 0;
+            return (int)Math.Round(scores.Average());
         }
     }
 }
