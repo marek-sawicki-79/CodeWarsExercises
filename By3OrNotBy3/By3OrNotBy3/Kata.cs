@@ -10,7 +10,10 @@ namespace By3OrNotBy3
     {
         public static bool DivisibleByThree(string n)
         {
-            throw new NotImplementedException();
+            int[] num = n.Select(c => int.Parse(c.ToString())).ToArray();
+            int sum = num.Sum();
+            if (sum % 3 == 0) return true;
+            else return false;
         }
     }
 }
