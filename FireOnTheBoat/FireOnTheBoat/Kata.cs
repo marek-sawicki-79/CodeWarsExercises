@@ -10,7 +10,15 @@ namespace FireOnTheBoat
     {
         public static string FireFight(string s)
         {
-            return s;
+            string[] boatItems = s.Split(" ");
+            for(int i = 0; i < boatItems.Length; i++)
+            {
+                if(boatItems[i] == "Fire")
+                {
+                    boatItems[i] = "~~";
+                }
+            }
+            return string.Join(" ", boatItems);
         }
     }
 }
