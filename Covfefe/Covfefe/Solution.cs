@@ -10,8 +10,10 @@ namespace Covfefe
     {
         public static string Covfefe(string tweet)
         {
-            if (!tweet.Contains("coverage")) return $"{tweet} covfefe";
-            else return String.Join(" ", tweet.Split(' ').Select(word => word.Equals("coverage") ? "covfefe" : word));
+            //if (!tweet.Contains("coverage")) return $"{tweet} covfefe";
+            //else return String.Join(" ", tweet.Split(' ').Select(word => word.Equals("coverage") ? "covfefe" : word));
+
+            return tweet.Contains("coverage") ? tweet.Replace("coverage", "covfefe") : tweet + " covfefe";
         }
     }
 }
