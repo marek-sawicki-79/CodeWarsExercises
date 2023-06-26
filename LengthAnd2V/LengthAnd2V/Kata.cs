@@ -10,7 +10,16 @@ namespace LengthAnd2V
     {
         public static object[] Alternate(int n, object firstValue, object secondValue)
         {
-            return new object[0];
+            object[] result = new object[n];
+            for (int i = 0; i < n; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    result[i] = firstValue;
+                }
+                    else result[i] = secondValue;
+            }
+            return result;
         }
     }
 }
