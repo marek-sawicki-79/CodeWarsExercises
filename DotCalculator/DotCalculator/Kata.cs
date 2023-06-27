@@ -11,33 +11,42 @@ namespace DotCalculator
     {
         public static string Calculator(string txt)
         {
-            //int dotCount = 0;
-            //string result = "";
-            //string[] elements = txt.Split(' ');
-            //switch (elements[1])
-            //{
-            //    case "+":
-            //        dotCount = elements[0].Length + elements[2].Length;
-            //        result = string.Join("", Enumerable.Repeat(".", dotCount));
-            //        return result;
-            //    case "-":
-            //        dotCount = elements[0].Length - elements[2].Length;
-            //        result = string.Join("", Enumerable.Repeat(".", dotCount));
-            //        return result;
-            //    case "//":
-            //        dotCount = elements[0].Length / elements[2].Length;
-            //        result = string.Join("", Enumerable.Repeat(".", dotCount));
-            //        return result;
-            //    case "*":
-            //        dotCount = elements[0].Length * elements[2].Length;
-            //        result = string.Join("", Enumerable.Repeat(".", dotCount));
-            //        return result;
-            //        default:
-            //        return "bad data";
-            //}
+            ////int dotCount = 0;
+            ////string result = "";
+            ////string[] elements = txt.Split(' ');
+            ////switch (elements[1])
+            ////{
+            ////    case "+":
+            ////        dotCount = elements[0].Length + elements[2].Length;
+            ////        result = string.Join("", Enumerable.Repeat(".", dotCount));
+            ////        return result;
+            ////    case "-":
+            ////        dotCount = elements[0].Length - elements[2].Length;
+            ////        result = string.Join("", Enumerable.Repeat(".", dotCount));
+            ////        return result;
+            ////    case "//":
+            ////        dotCount = elements[0].Length / elements[2].Length;
+            ////        result = string.Join("", Enumerable.Repeat(".", dotCount));
+            ////        return result;
+            ////    case "*":
+            ////        dotCount = elements[0].Length * elements[2].Length;
+            ////        result = string.Join("", Enumerable.Repeat(".", dotCount));
+            ////        return result;
+            ////        default:
+            ////        return "bad data";
+            ////}
 
-            var s = txt.Replace("//", "/").Split();
-            return new string('.', Convert.ToInt32(new DataTable().Compute($"{s[0].Length}{s[1]}{s[2].Length}", null)));
+            //var s = txt.Replace("//", "/").Split();
+            //return new string('.', Convert.ToInt32(new DataTable().Compute($"{s[0].Length}{s[1]}{s[2].Length}", null)));
+
+            string[] sides = txt.Split(" ");
+            int x = sides[0].Length,
+                y = sides[2].Length,
+                z = txt.Contains('+') ? x + y :
+                    txt.Contains('-') ? x - y :
+                    txt.Contains('*') ? x * y :
+                                        x / y;
+            return new StringBuilder().Insert(0, ".", z).ToString();
         }
     }
 }
