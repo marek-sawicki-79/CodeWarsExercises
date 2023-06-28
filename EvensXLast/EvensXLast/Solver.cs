@@ -10,7 +10,19 @@ namespace EvensXLast
 	{
 		public static int EvenTimesLast(int[] arr)
 		{
-			return 0;
+			if (arr.Length == 0)
+			{
+				return 0;
+			}
+			List<int> evensList = new List<int>();
+			for(int i = 0; i < arr.Length; i++)
+            {
+				if (i % 2 == 0)
+				{
+					evensList.Add(arr[i]);
+				}
+            }
+			return evensList.Sum() * arr[arr.Length -1];
 		}
 	}
 }
