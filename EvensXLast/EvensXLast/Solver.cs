@@ -22,7 +22,7 @@ namespace EvensXLast
 					evensList.Add(arr[i]);
 				}
             }
-			return evensList.Sum() * arr[arr.Length -1];
+			return evensList.Sum()/* * arr[arr.Length -1]*/ * arr.Last();
 		}
 	}
 }
