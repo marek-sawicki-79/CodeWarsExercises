@@ -10,8 +10,19 @@ namespace EvenOrOddIsGreater
     {
         public static string EvenOrOdd(string str)
         {
-            // your code here
-            return string.Empty;
+            List<int> odds = new List<int>();
+            List<int> evens = new List<int>();
+            int[] numbers = str.Select(c => Convert.ToInt32(c.ToString())).ToArray();
+            foreach(int n in numbers)
+            {
+                if(n % 2 == 0)
+                {
+                    evens.Add(n);
+                }
+                else odds.Add(n);
+            }
+            return (odds.Sum() > evens.Sum()) ? "Odd is greater than Even" :
+                (odds.Sum() < evens.Sum()) ? "Even is greater than Odd" : "Even and Odd are the same";
         }
     }
 }
