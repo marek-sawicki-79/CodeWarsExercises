@@ -10,10 +10,12 @@ namespace UniqueSum
     {
         public static int? UniqueSum(List<int> lst)
         {
-            List<int> distinctInts = lst.Distinct().ToList();
-            int result = distinctInts.Sum();
-            if (lst == null || result == 0) return null;
-            else return result;
+            //List<int> distinctInts = lst.Distinct().ToList();
+            //int result = distinctInts.Sum();
+            //if (lst == null || result == 0) return null;
+            //else return result;
+
+            return lst.Any() ? lst.Distinct().Sum() : new int?();
         }
     }
 }
