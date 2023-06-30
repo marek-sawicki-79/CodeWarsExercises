@@ -10,7 +10,8 @@ namespace UniqueSum
     {
         public static int? UniqueSum(List<int> lst)
         {
-            throw new NotImplementedException();
+            List<int> distinctInts = lst.Distinct().ToList();
+            return distinctInts.Sum();
         }
     }
 }
