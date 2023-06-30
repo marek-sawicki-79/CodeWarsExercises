@@ -11,7 +11,9 @@ namespace UniqueSum
         public static int? UniqueSum(List<int> lst)
         {
             List<int> distinctInts = lst.Distinct().ToList();
-            return distinctInts.Sum();
+            int result = distinctInts.Sum();
+            if (lst == null || result == 0) return null;
+            else return result;
         }
     }
 }
