@@ -10,7 +10,15 @@ namespace InitializeMyName
     {
         public static string InitializeNames(string name)
         {
-            return name;
+            string[] names = name.Split(' ');
+            if(names.Length > 2)
+            {
+                for(int i = 1; i < names.Length - 1; i++)
+                {
+                    names[i] = $"{names[i][0]}.";
+                }
+            }
+            return string.Join(" ", names);
         }
     }
 }
