@@ -10,7 +10,8 @@ namespace WeHaveLiftoff
     {
         public static string Liftoff(List<int> instructions)
         {
-            throw new NotImplementedException();
+            var sorted = instructions.OrderByDescending(x => x).ToList();
+            return $"{string.Join(" ", sorted)} liftoff!";
         }
     }
 }
