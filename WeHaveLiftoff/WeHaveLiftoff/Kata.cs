@@ -10,8 +10,10 @@ namespace WeHaveLiftoff
     {
         public static string Liftoff(List<int> instructions)
         {
-            var sorted = instructions.OrderByDescending(x => x).ToList();
-            return $"{string.Join(" ", sorted)} liftoff!";
+            //var sorted = instructions.OrderByDescending(x => x).ToList();
+            //return $"{string.Join(" ", sorted)} liftoff!";
+
+            return $"{string.Join(" ", instructions.OrderBy(x => -x))} liftoff!";
         }
     }
 }
