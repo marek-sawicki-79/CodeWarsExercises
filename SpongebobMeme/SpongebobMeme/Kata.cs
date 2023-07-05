@@ -10,19 +10,21 @@ namespace SpongebobMeme
     {
         public static string SpongeMeme(string sentence)
         {
-            StringBuilder result = new StringBuilder();
-            for(int i = 0; i < sentence.Length; i++)
-            {
-                if(i % 2 == 0)
-                {
-                    result.Append(char.ToUpper(sentence[i]));
-                }
-                else
-                {
-                    result.Append(char.ToLower(sentence[i]));
-                }
-            }
-            return result.ToString();
+            //StringBuilder result = new StringBuilder();
+            //for(int i = 0; i < sentence.Length; i++)
+            //{
+            //    if(i % 2 == 0)
+            //    {
+            //        result.Append(char.ToUpper(sentence[i]));
+            //    }
+            //    else
+            //    {
+            //        result.Append(char.ToLower(sentence[i]));
+            //    }
+            //}
+            //return result.ToString();
+
+            return String.Concat(sentence.Select((c, i) => i % 2 == 1 ? char.ToLower(c) : char.ToUpper(c)));
         }
     }
 }
