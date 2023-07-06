@@ -10,7 +10,14 @@ namespace SumOfABeach
     {
         public static int SumOfABeach(string s)
         {
-            // your code
+            string[] beachParty = { "sand", "water", "fish", "sun" };
+            int counter = 0;
+            foreach (string party in beachParty)
+            {
+                int index = -1;
+                while ((index = s.ToLower().IndexOf(party, index + 1)) != -1) counter++;
+            }
+            return counter;
         }
     }
 }
