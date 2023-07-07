@@ -10,15 +10,15 @@ namespace AreaOfACircle
     {
         public static double CalculateAreaOfCircle(string radius)
         {
-            double rad = double.Parse(radius);
-            double pi = 3.14;
-            if(rad  <= 0.0)
+            double rad;
+            if (double.TryParse(radius, out rad) && rad > 0)
             {
-                throw new ArgumentException();
+                double area = Math.PI * rad * rad;
+                return Math.Round(area, 2);
             }
             else
             {
-                return rad * rad * pi;
+                throw new ArgumentException();
             }
         }
     }
