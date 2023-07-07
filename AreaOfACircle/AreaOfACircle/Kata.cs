@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace AreaOfACircle
 {
@@ -10,16 +11,9 @@ namespace AreaOfACircle
     {
         public static double CalculateAreaOfCircle(string radius)
         {
-            double rad;
-            if (double.TryParse(radius, out rad) && rad > 0)
-            {
-                double area = Math.PI * rad * rad;
-                return Math.Round(area, 2);
-            }
-            else
-            {
-                throw new ArgumentException();
-            }
+            return double.TryParse(radius, NumberStyles.Float, CultureInfo.InvariantCulture, out var r) && r > 0
+               ? Math.Round(r * r * Math.PI, 2)
+               : throw new ArgumentException();
         }
     }
 }
