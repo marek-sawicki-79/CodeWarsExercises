@@ -14,19 +14,22 @@ namespace CaffeineScript
             if(n % 3 == 0 && n % 4 == 0)
             {
                 result = "Coffee";
+                if(n % 2 ==0)
+                {
+                    result = $"{result}Script";
+                }
             }
             else if (n % 3 == 0)
             {
                 result = "Java";
+                if (n % 2 == 0)
+                {
+                    result = $"{result}Script";
+                }
             }
             else
             {
                 result = "mocha_missing!";
-            }
-
-            if(n % 2 == 0)
-            {
-                result = $"{result}Script";
             }
             return result;
         }
