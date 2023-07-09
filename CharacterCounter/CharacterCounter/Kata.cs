@@ -10,9 +10,11 @@ namespace CharacterCounter
     {
         public static bool ValidateWord(string s)
         {
-            var uniqueCharCount = s.ToLower().GroupBy(c => c).ToDictionary(g => g.Key, g => g.Count());
-            int countThatSh = uniqueCharCount.First().Value;
-            return uniqueCharCount.All(pair => pair.Value == countThatSh);
+            //var uniqueCharCount = s.ToLower().GroupBy(c => c).ToDictionary(g => g.Key, g => g.Count());
+            //int countThatSh = uniqueCharCount.First().Value;
+            //return uniqueCharCount.All(pair => pair.Value == countThatSh);
+
+            return s.Length % s.ToLower().Distinct().Count() == 0;
         }
     }
 }
