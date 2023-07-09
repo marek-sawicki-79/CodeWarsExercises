@@ -10,7 +10,8 @@ namespace CharacterCounter
     {
         public static bool ValidateWord(string s)
         {
-            //Code goes here!
+            int uniqueCharCount = s.Distinct().Count();
+            return (s.Length % uniqueCharCount == 0);
         }
     }
 }
