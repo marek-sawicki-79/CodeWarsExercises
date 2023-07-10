@@ -10,7 +10,11 @@ namespace VampireNumbers
     {
         public static bool vampire_test(long x, long y)
         {
-            //Good Luck!
+            string xString = x.ToString();
+            string yString = y.ToString();
+            long result = x * y;
+            string resultString = result.ToString();
+            return xString.All(c => resultString.Contains(c)) && yString.All(c => resultString.Contains(c));
         }
     }
 }
