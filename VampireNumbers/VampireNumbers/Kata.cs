@@ -10,39 +10,41 @@ namespace VampireNumbers
     {
         public static bool vampire_test(long x, long y)
         {
-            string xString = x.ToString();
-            string yString = y.ToString();
-            long result = x * y;
-            string resultString = result.ToString();
-            string bloodSucked = "";
-            bool vampire = true;
-            foreach (char digit in xString)
-            {
-                if (resultString.Contains(digit))
-                {
-                    resultString = resultString.Remove(resultString.IndexOf(digit), 1);
-                    bloodSucked = resultString;
-                }
-                else
-                {
-                    vampire = false;
-                    break;
-                }
-            }
+            //string xString = x.ToString();
+            //string yString = y.ToString();
+            //long result = x * y;
+            //string resultString = result.ToString();
+            //string bloodSucked = "";
+            //bool vampire = true;
+            //foreach (char digit in xString)
+            //{
+            //    if (resultString.Contains(digit))
+            //    {
+            //        resultString = resultString.Remove(resultString.IndexOf(digit), 1);
+            //        bloodSucked = resultString;
+            //    }
+            //    else
+            //    {
+            //        vampire = false;
+            //        break;
+            //    }
+            //}
 
-            foreach (char digit in yString)
-            {
-                if (bloodSucked.Contains(digit))
-                {
-                    bloodSucked = bloodSucked.Remove(bloodSucked.IndexOf(digit), 1);
-                }
-                else
-                {
-                    vampire = false;
-                    break;
-                }
-            }
-            return vampire;
+            //foreach (char digit in yString)
+            //{
+            //    if (bloodSucked.Contains(digit))
+            //    {
+            //        bloodSucked = bloodSucked.Remove(bloodSucked.IndexOf(digit), 1);
+            //    }
+            //    else
+            //    {
+            //        vampire = false;
+            //        break;
+            //    }
+            //}
+            //return vampire;
+
+            return (x * y).ToString().OrderBy(c => c).SequenceEqual((x.ToString() + y).OrderBy(c => c));
         }
     }
 }
