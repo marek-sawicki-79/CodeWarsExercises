@@ -21,8 +21,6 @@ namespace CalculateMeanAndConcatenateStr
             }
             result[0] = sum / 10;
 
-            //double avr = lst.Select(n => (int)n).Average();
-            //result[0] = avr;
             result[1] = string.Concat(lst.Where(c => !Char.IsDigit(c)).ToArray());
             return result;
         }
