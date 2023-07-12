@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace LargestSquareInACircle
 {
-    internal class Circle
+    public class Circle
     {
+        public double AreaLargestSquare(int r)
+        {
+            double squareSide = 2 * r / Math.Sqrt(2);
+            return Math.Round((squareSide * squareSide), 0);
+        }
     }
 }
