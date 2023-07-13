@@ -10,17 +10,19 @@ namespace OdderThanTheRest
     {
         public static int OddOne(List<int> list)
         {
-            int result = 0;
-            foreach(int i in list)
-            {
-                if (i % 2 != 0)
-                {
-                    result = list.IndexOf(i);
-                    break;
-                }
-                else result = -1;
-            }
-            return result;
+            //int result = 0;
+            //foreach(int i in list)
+            //{
+            //    if (i % 2 != 0)
+            //    {
+            //        result = list.IndexOf(i);
+            //        break;
+            //    }
+            //    else result = -1;
+            //}
+            //return result;
+
+            return list.FindIndex(i => i % 2 != 0);
         }
     }
 }
