@@ -10,13 +10,15 @@ namespace DigitsExplosion
     {
         public static string Explode(string s)
         {
-            string result = "";
-            foreach (char c in s)
-            {
-                string ble = new string(c, int.Parse(c.ToString()));
-                result = result + ble;
-            }
-            return result;
+            //string result = "";
+            //foreach (char c in s)
+            //{
+            //    string ble = new string(c, int.Parse(c.ToString()));
+            //    result = result + ble;
+            //}
+            //return result;
+
+            return string.Join("", s.Select(c => new string(c, int.Parse(c.ToString()))));
         }
     }
 }
