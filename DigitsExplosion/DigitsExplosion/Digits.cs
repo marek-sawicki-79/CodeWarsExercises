@@ -18,7 +18,9 @@ namespace DigitsExplosion
             //}
             //return result;
 
-            return string.Join("", s.Select(c => new string(c, int.Parse(c.ToString()))));
+            //return string.Join("", s.Select(c => new string(c, int.Parse(c.ToString()))));
+
+            return string.Concat(s.Select(n => new String(n, n - 48)));
         }
     }
 }
