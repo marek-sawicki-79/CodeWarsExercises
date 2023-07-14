@@ -1,16 +1,13 @@
 namespace DigitsExplosion
 {
-    public class Tests
+    [TestFixture]
+    public static class DigitsTests
     {
-        [SetUp]
-        public void Setup()
+        [TestCase("312", "333122")]
+        [TestCase("102269", "12222666666999999999")]
+        public static void ExplodeTests(string s, string result)
         {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
+            Assert.AreEqual(result, Digits.Explode(s));
         }
     }
 }

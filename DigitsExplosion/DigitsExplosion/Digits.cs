@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace DigitsExplosion
 {
-    internal class Digits
+    public class Digits
     {
+        public static string Explode(string s)
+        {
+            string result = "";
+            foreach (char c in s)
+            {
+                string ble = new string(c, int.Parse(c.ToString()));
+                result = result + ble;
+            }
+            return result;
+        }
     }
 }
