@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace BasicCalculator
 {
-    internal class Calculator
+    public static class Calculator
     {
+        public static double Execute(double num1, char op, double num2)
+        {
+            switch (op)
+            {
+                case '+':
+                    return num1 + num2;
+                case '-':
+                    return num1 - num2;
+                case '*':
+                    return num1 * num2;
+                case '/':
+                    if (num1 == 0)
+                    {
+                        throw new ArgumentException();
+                    }
+                    else return num1 / num2;
+                default: throw new ArgumentException();
+            }
+        }
     }
 }
