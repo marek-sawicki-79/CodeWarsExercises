@@ -10,28 +10,30 @@ namespace WordValues
     {
         public static int[] WordValue(string[] a)
         {
-            int[] result = new int[a.Length];
-            int index = 0;
-            for (int i = 0; i < a.Length; i++)
-            {
-                int wordValue = 0;
-                foreach (char c in a[i])
-                {
-                    int charValue = 0;
-                    if (c == ' ')
-                    {
-                        charValue = 0;
-                    }
-                    else
-                    {
-                        charValue = (int)(char.ToLower(c) - 'a') + 1;
-                    }
-                    wordValue += charValue;
-                }
-                result[index] = wordValue * (i + 1);
-                index++;
-            }
-            return result;
+            //int[] result = new int[a.Length];
+            //int index = 0;
+            //for (int i = 0; i < a.Length; i++)
+            //{
+            //    int wordValue = 0;
+            //    foreach (char c in a[i])
+            //    {
+            //        int charValue = 0;
+            //        if (c == ' ')
+            //        {
+            //            charValue = 0;
+            //        }
+            //        else
+            //        {
+            //            charValue = (int)(char.ToLower(c) - 'a') + 1;
+            //        }
+            //        wordValue += charValue;
+            //    }
+            //    result[index] = wordValue * (i + 1);
+            //    index++;
+            //}
+            //return result;
+
+            return a.Select((x, i) => x.Sum(c => c != 32 ? c - 96 : 0) * ++i).ToArray();
         }
     }
 }
