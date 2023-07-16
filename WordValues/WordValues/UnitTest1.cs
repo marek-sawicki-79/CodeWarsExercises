@@ -1,16 +1,18 @@
 namespace WordValues
 {
-    public class Tests
+    [TestFixture]
+    public class SolutionTest
     {
-        [SetUp]
-        public void Setup()
+        private static IEnumerable<TestCaseData> sampleTestCases
         {
+            get
+            {
+                yield return new TestCaseData(new[] { new string[] { "codewars", "abc", "xyz" } }).Returns(new int[] { 88, 12, 225 });
+                yield return new TestCaseData(new[] { new string[] { "abc abc", "abc abc", "abc", "abc" } }).Returns(new int[] { 12, 24, 18, 24 });
+            }
         }
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
+        [Test, TestCaseSource("sampleTestCases")]
+        public int[] SampleTest(string[] a) => Kata.WordValue(a);
     }
 }
