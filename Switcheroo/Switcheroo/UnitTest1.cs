@@ -1,16 +1,14 @@
 namespace Switcheroo
 {
-    public class Tests
+    [TestFixture]
+    public class KataTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void BasicTests()
         {
-            Assert.Pass();
+            Assert.AreEqual("bac", Kata.Switcheroo("abc"));
+            Assert.AreEqual("bbbacccabbb", Kata.Switcheroo("aaabcccbaaa"));
+            Assert.AreEqual("ccccc", Kata.Switcheroo("ccccc"));
         }
     }
 }
