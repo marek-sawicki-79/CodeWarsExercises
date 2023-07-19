@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace LargestElements
 {
-    internal class Kata
+    public class Kata
     {
+        public static List<int> Largest(int n, List<int> xs)
+        {
+            return xs.OrderByDescending(x => x).Take(n).ToList();
+        }
     }
 }
