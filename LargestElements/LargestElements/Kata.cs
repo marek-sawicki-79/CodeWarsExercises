@@ -10,7 +10,7 @@ namespace LargestElements
     {
         public static List<int> Largest(int n, List<int> xs)
         {
-            return xs.OrderByDescending(x => x).Take(n).ToList();
+            return xs.OrderByDescending(x => x).Take(n).OrderBy(y => y).ToList();
         }
     }
 }
