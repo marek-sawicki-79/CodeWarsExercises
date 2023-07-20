@@ -13,7 +13,9 @@ namespace ReturnMissingElement
             //int[] blabla = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             //return blabla.Except(superImportantArray).Single();
 
-            return (int)Enumerable.Range(0, 9).Except(superImportantArray).FirstOrDefault();
+            //return (int)Enumerable.Range(0, 9).Except(superImportantArray).FirstOrDefault();
+
+            return 45 - superImportantArray.Sum();
         }
     }
 }
