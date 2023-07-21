@@ -1,16 +1,14 @@
 namespace BuildStringFromObject
 {
-    public class Tests
+    [TestFixture]
+    public class SolutionTest
     {
-        [SetUp]
-        public void Setup()
+        [Test, Description("Basic Tests")]
+        public void Test()
         {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
+            Assert.AreEqual("a = 1,b = 2", Kata.StringifyDict(new Dictionary<char, int> { { 'a', 1 }, { 'b', 2 } }));
+            Assert.AreEqual("b = 1,c = 2,e = 3", Kata.StringifyDict(new Dictionary<char, int> { { 'b', 1 }, { 'c', 2 }, { 'e', 3 } }));
+            Assert.AreEqual("", Kata.StringifyDict(new Dictionary<char, int>()));
         }
     }
 }

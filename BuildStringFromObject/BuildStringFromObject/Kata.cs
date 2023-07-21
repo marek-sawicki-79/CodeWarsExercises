@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BuildStringFromObject
 {
-    internal class Kata
+    public static class Kata
     {
+        public static string StringifyDict<TKey, TValue>(Dictionary<TKey, TValue> hash)
+        {
+            return $"{String.Join(",", hash.Keys)}={String.Join(",", hash.Values)}";
+        }
     }
 }
