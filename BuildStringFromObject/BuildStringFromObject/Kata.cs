@@ -10,7 +10,8 @@ namespace BuildStringFromObject
     {
         public static string StringifyDict<TKey, TValue>(Dictionary<TKey, TValue> hash)
         {
-            return $"{String.Join(",", hash.Keys)}={String.Join(",", hash.Values)}";
+
+            return string.Join(",", (hash.Select(kv => $"{kv.Key} = {kv.Value}").ToArray()));
         }
     }
 }
