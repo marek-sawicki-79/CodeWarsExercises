@@ -11,7 +11,8 @@ namespace COuntConsonants
         public static int ConsonantCount(string str)
         {
             char[] vowels = { 'o', 'i', 'u', 'e', 'a' };
-            return str.ToLower().Count(c => !vowels.Contains(c));
+            string halfResult = new string(str.ToLower().Where(Char.IsLetter).ToArray());
+            return halfResult.ToCharArray().Count(c => !vowels.Contains(c));
         }
     }
 }
