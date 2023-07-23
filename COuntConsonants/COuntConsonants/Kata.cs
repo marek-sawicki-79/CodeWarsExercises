@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace COuntConsonants
 {
-    internal class Kata
+    public class Kata
     {
+        public static int ConsonantCount(string str)
+        {
+            char[] vowels = { 'o', 'i', 'u', 'e', 'a' };
+            return str.ToLower().Count(c => !vowels.Contains(c));
+        }
     }
 }
