@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CountLettersAndDigits
 {
-    internal class Kata
+    public static class Kata
     {
+        public static int CountLettersAndDigits(string input)
+        {
+            return input.Where(char.IsLetterOrDigit).Count();
+        }
     }
 }

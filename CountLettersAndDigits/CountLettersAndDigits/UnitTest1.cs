@@ -1,16 +1,12 @@
 namespace CountLettersAndDigits
 {
-    public class Tests
+    [TestFixture]
+    public class Helper
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+            Assert.AreEqual(7, Kata.CountLettersAndDigits("n!!ice!!123"));
         }
     }
 }
