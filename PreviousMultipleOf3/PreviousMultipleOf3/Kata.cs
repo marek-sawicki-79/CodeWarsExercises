@@ -18,7 +18,7 @@ namespace PreviousMultipleOf3
                     result = n;
                     break;
                 }
-                n = n / 10;
+                n /= 10;
             }
             if (result == 0)
             {
