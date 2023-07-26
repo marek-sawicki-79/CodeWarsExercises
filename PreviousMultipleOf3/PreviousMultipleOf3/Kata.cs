@@ -10,21 +10,23 @@ namespace PreviousMultipleOf3
     {
         public static int? PreviousMultipleOfThree(int n)
         {
-            int? result = null;
-            while (n.ToString().Length > 0)
-            {
-                if (n % 3 == 0)
-                {
-                    result = n;
-                    break;
-                }
-                n /= 10;
-            }
-            if (result == 0)
-            {
-                result = null;
-            }
-            return result;
+            //int? result = null;
+            //while (n.ToString().Length > 0)
+            //{
+            //    if (n % 3 == 0)
+            //    {
+            //        result = n;
+            //        break;
+            //    }
+            //    n /= 10;
+            //}
+            //if (result == 0)
+            //{
+            //    result = null;
+            //}
+            //return result;
+
+            return n == 0 ? null : n % 3 == 0 ? n : PreviousMultipleOfThree(n / 10);
         }
     }
 }
