@@ -1,16 +1,18 @@
 namespace AsciiStringSumCompare
 {
-    public class Tests
+    [TestFixture]
+    public class ComparingTests
     {
-        [SetUp]
-        public void Setup()
+        [Test]
+        public void Compare1()
         {
+            Assert.AreEqual(true, Kata.Compare("AD", "BC"));
         }
 
         [Test]
-        public void Test1()
+        public void Compare2()
         {
-            Assert.Pass();
+            Assert.AreEqual(false, Kata.Compare("AD", "DD"));
         }
     }
 }
