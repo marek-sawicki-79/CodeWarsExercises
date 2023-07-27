@@ -16,14 +16,22 @@ namespace AsciiStringSumCompare
             int sumS2 = 0;
             for (int i = 0; i < s1Chars.Length; i++)
             {
-                if (char.IsUpper(s1Chars[i]))
+                if (!char.IsLetter(s1Chars[i]))
+                {
+                    sumS1 = 0;
+                }
+                else
                 {
                     sumS1 += Convert.ToInt32(s1Chars[i]);
                 }
             }
             for (int j = 0; j < s2Chars.Length; j++)
             {
-                if (char.IsUpper(s2Chars[j]))
+                if (!char.IsLetter(s2Chars[j]))
+                {
+                    sumS2 = 0;
+                }
+                else
                 {
                     sumS2 += Convert.ToInt32(s2Chars[j]);
                 }
