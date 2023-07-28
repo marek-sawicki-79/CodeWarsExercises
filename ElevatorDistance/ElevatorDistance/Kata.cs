@@ -10,12 +10,14 @@ namespace ElevatorDistance
     {
         public static int ElevatorDistance(int[] array)
         {
-            int result = 0;
-            for (int i = 1; i < array.Length; i++)
-            {
-               result = result + Math.Abs(array[i] - array[i - 1]);
-            }
-            return result;
+            //int result = 0;
+            //for (int i = 1; i < array.Length; i++)
+            //{
+            //   result = result + Math.Abs(array[i] - array[i - 1]);
+            //}
+            //return result;
+
+            return Enumerable.Range(0, array.Length - 1).Sum(i => Math.Abs(array[i] - array[i + 1]));
         }
     }
 }
