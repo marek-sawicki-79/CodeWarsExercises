@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace NumberOfOccurences
 {
-    internal class OccurrencesKata
+    public class OccurrencesKata
     {
+        public static int NumberOfOccurrences(int x, int[] xs)
+        {
+            return xs.Count(n => n == x);
+        }
     }
 }
