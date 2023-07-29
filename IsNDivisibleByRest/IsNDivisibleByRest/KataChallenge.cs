@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace IsNDivisibleByRest
 {
-    internal class KataChallenge
+    public static class KataChallenge
     {
+        public static bool IsDivisible(int a, int b, int c)
+        {
+            return (a % b == 0 && a % c == 0) ? true : false;
+        }
     }
 }

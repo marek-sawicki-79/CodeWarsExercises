@@ -1,16 +1,18 @@
 namespace IsNDivisibleByRest
 {
-    public class Tests
+    [TestFixture]
+    public class SolutionTest
     {
-        [SetUp]
-        public void Setup()
+        [Test]
+        public void BasicTest1()
         {
+            Assert.AreEqual(false, KataChallenge.IsDivisible(3, 3, 4));
         }
 
         [Test]
-        public void Test1()
+        public void BasicTest2()
         {
-            Assert.Pass();
+            Assert.AreEqual(true, KataChallenge.IsDivisible(12, 3, 4));
         }
     }
 }
