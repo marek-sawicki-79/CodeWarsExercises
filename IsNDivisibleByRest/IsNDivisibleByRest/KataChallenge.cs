@@ -10,16 +10,18 @@ namespace IsNDivisibleByRest
     {
         public static bool IsDivisible(params int[] numbers)
         {
-           if (numbers.Length < 2) return false;
-            else
-            {
-                int firstNum = numbers[0];
-                for (int i = 1; i < numbers.Length; i++)
-                {
-                    if (firstNum % numbers[i] != 0) return false;
-                }
-                return true;
-            }
+           //if (numbers.Length < 2) return false;
+           // else
+           // {
+           //     int firstNum = numbers[0];
+           //     for (int i = 1; i < numbers.Length; i++)
+           //     {
+           //         if (firstNum % numbers[i] != 0) return false;
+           //     }
+           //     return true;
+           // }
+
+            return numbers.All( n => numbers[0] % n == 0 );
         }
     }
 }
