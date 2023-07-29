@@ -1,16 +1,21 @@
+using System;
+
 namespace getNames
 {
-    public class Tests
+    [TestFixture]
+    public class Sample_Test
     {
-        [SetUp]
-        public void Setup()
+        private static Person[] testCase = new Person[]
         {
-        }
+            new Person("Joe", 20),
+            new Person("Bill", 30),
+            new Person("Kate", 23)
+        };
 
-        [Test]
-        public void Test1()
+        [Test, Description("Sample Test")]
+        public void Test()
         {
-            Assert.Pass();
+            Assert.AreEqual(new string[] { "Joe", "Bill", "Kate" }, Kata.GetNames(testCase));
         }
     }
 }
