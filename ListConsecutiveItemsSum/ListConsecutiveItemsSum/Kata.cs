@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ListConsecutiveItemsSum
 {
-    internal class Kata
+    public class Kata
     {
+        public static int SumNoDuplicates(int[] arr)
+        {
+            return arr.Where(x => arr.Count(n => n == x) == 1).Sum();
+        }
     }
 }
