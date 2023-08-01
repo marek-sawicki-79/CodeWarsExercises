@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FilterCoffee
 {
-    internal class Kata
+    public class Kata
     {
+        public static string Search(int budget, int[] prices)
+        {
+            return string.Join(",", prices.Where(p => p <= budget).OrderBy(p => p));
+        }
     }
 }

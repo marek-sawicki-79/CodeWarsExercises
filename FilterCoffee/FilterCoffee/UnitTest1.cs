@@ -1,16 +1,15 @@
 namespace FilterCoffee
 {
+    [TestFixture]
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        [TestCase(3, new int[] { 6, 1, 2, 9, 2 }, ExpectedResult = "1,2,2")]
+        [TestCase(14, new int[] { 7, 3, 23, 9, 14, 20, 7 }, ExpectedResult = "3,7,7,9,14")]
+        [TestCase(0, new int[] { 6, 1, 2, 9, 2 }, ExpectedResult = "")]
+        public static string FixedTest(int budget, int[] prices)
         {
-            Assert.Pass();
+            return Kata.Search(budget, prices);
         }
     }
 }
