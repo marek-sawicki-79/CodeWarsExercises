@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PronicNumber", "PronicNumber\PronicNumber.csproj", "{9155C62B-0003-43C9-869C-DC1E0EA6BC8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9155C62B-0003-43C9-869C-DC1E0EA6BC8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9155C62B-0003-43C9-869C-DC1E0EA6BC8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9155C62B-0003-43C9-869C-DC1E0EA6BC8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9155C62B-0003-43C9-869C-DC1E0EA6BC8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03295FD7-7DB0-4BE3-AD22-B077B7671554}
+	EndGlobalSection
+EndGlobal
