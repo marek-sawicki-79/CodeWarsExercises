@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace PronicNumber
 {
-    internal class Kata
+    public class Kata
     {
+        public static bool IsPronic(int n)
+        {
+            int pn = (int)Math.Sqrt(n);
+            return pn * (pn + 1) == n;
+        }
     }
 }
