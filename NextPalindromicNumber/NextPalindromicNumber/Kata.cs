@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace NextPalindromicNumber
 {
-    internal class Kata
+    public class Kata
     {
+        public static int NextPal(int val)
+        {
+            while(true)
+            {
+                val ++;
+                string numberStr = val.ToString();
+                if (numberStr.SequenceEqual(numberStr.Reverse()))
+                {
+                    return val;
+                }
+            }
+        }
     }
 }

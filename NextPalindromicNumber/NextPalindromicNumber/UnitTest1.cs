@@ -1,16 +1,15 @@
 namespace NextPalindromicNumber
 {
-    public class Tests
+    [TestFixture]
+    public class KataTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void BasicTests()
         {
-            Assert.Pass();
+            Assert.AreEqual(22, Kata.NextPal(11));
+            Assert.AreEqual(191, Kata.NextPal(188));
+            Assert.AreEqual(202, Kata.NextPal(191));
+            Assert.AreEqual(2552, Kata.NextPal(2541));
         }
     }
 }
