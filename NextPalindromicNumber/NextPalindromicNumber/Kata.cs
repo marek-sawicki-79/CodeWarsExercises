@@ -10,15 +10,21 @@ namespace NextPalindromicNumber
     {
         public static int NextPal(int val)
         {
-            while(true)
+            //while(true)
+            //{
+            //    val ++;
+            //    string numberStr = val.ToString();
+            //    if (numberStr.SequenceEqual(numberStr.Reverse()))
+            //    {
+            //        return val;
+            //    }
+            //}
+
+            do
             {
-                val ++;
-                string numberStr = val.ToString();
-                if (numberStr.SequenceEqual(numberStr.Reverse()))
-                {
-                    return val;
-                }
-            }
+                val++;
+            } while (val.ToString() != string.Concat(val.ToString().Reverse()));
+            return val;
         }
     }
 }
