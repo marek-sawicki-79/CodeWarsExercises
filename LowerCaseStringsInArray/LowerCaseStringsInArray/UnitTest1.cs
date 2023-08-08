@@ -1,16 +1,12 @@
 namespace LowerCaseStringsInArray
 {
-    public class Tests
+    [TestFixture]
+    public class KataTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void BasicTest()
         {
-            Assert.Pass();
+            Assert.AreEqual(new object[] { "red", "green" }, Kata.ArrayLowerCase(new object[] { "Red", "Green" }));
         }
     }
 }
