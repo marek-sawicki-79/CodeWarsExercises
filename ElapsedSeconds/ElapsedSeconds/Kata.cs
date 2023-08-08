@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ElapsedSeconds
 {
-    internal class Kata
+    public class Kata
     {
+        public static int ElapsedSeconds(DateTime startDate, DateTime endDate)
+        {
+            return (int)(endDate - startDate).TotalSeconds;
+        }
     }
 }

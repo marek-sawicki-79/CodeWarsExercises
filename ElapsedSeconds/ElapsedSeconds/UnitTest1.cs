@@ -1,16 +1,18 @@
 namespace ElapsedSeconds
 {
-    public class Tests
+    [TestFixture]
+    public class KataTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void BasicTests()
         {
-            Assert.Pass();
+            var start = new DateTime(2013, 1, 1, 0, 0, 1);
+            var end = new DateTime(2013, 1, 1, 0, 0, 2);
+            var end2 = new DateTime(2013, 1, 1, 0, 0, 20);
+            var end3 = new DateTime(2013, 1, 1, 0, 1, 20);
+            Assert.AreEqual(1, Kata.ElapsedSeconds(start, end));
+            Assert.AreEqual(19, Kata.ElapsedSeconds(start, end2));
+            Assert.AreEqual(79, Kata.ElapsedSeconds(start, end3));
         }
     }
 }
