@@ -10,9 +10,9 @@ namespace TheOficceVI_Sabbatical
     {
         public static string Sabb(string s, int val, int happiness)
         {
-            string witch = "sabbatical";
+            string witch = "SABTICLsabticl";
             int sabbSum = witch.Sum(c => s.Count(x => x == c));
-            int verdict = val * happiness + sabbSum;
+            int verdict = val + happiness + sabbSum;
             return verdict > 22 ? "Sabbatical! Boom!" : "Back to your desk, boy.";
         }
     }
