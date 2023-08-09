@@ -10,10 +10,14 @@ namespace TheOficceVI_Sabbatical
     {
         public static string Sabb(string s, int val, int happiness)
         {
-            string witch = "SABTICLsabticl";
-            int sabbSum = witch.Sum(c => s.Count(x => x == c));
-            int verdict = val + happiness + sabbSum;
-            return verdict > 22 ? "Sabbatical! Boom!" : "Back to your desk, boy.";
+            //string witch = "SABTICLsabticl";
+            //int sabbSum = witch.Sum(c => s.Count(x => x == c));
+            //int verdict = val + happiness + sabbSum;
+            //return verdict > 22 ? "Sabbatical! Boom!" : "Back to your desk, boy.";
+
+            return s.Count("SABTICLsabticl".Contains) + val + happiness > 22
+                ? "Sabbatical! Boom!"
+                : "Back to your desk, boy.";
         }
     }
 }
