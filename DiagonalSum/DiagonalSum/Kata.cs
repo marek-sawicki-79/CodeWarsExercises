@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace DiagonalSum
 {
-    internal class Kata
+    public static class Kata
     {
+        public static int DiagonalSum(int[,] matrix)
+        {
+            int sum = 0;
+            for(int i = 0; i < matrix.GetLength(0); i++)
+            {
+                sum += matrix[i, i];
+            }
+            return sum;
+        }
     }
 }
