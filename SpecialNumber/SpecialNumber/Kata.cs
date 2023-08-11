@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace SpecialNumber
 {
-    internal class Kata
+    class Kata
     {
+        public static string SpecialNumber(int number)
+        {
+            int[] compare = { 0, 1, 2, 3, 4, 5 };
+            string num = number.ToString();
+            return (num.All(c => compare.Contains(c))) ? "Special!!" : "NOT!!";
+        }
     }
 }
