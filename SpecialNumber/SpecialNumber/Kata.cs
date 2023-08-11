@@ -10,7 +10,7 @@ namespace SpecialNumber
     {
         public static string SpecialNumber(int number)
         {
-            int[] compare = { 0, 1, 2, 3, 4, 5 };
+            string compare = "012345";
             string num = number.ToString();
             return (num.All(c => compare.Contains(c))) ? "Special!!" : "NOT!!";
         }
