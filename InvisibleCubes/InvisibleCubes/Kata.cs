@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace InvisibleCubes
 {
-    internal class Kata
+    public class Kata
     {
+        public static int NotVisibleCubes(int n)
+        {
+            return (n <= 2) ? 0 : (int)Math.Pow((n - 2), 3);
+        }
     }
 }
