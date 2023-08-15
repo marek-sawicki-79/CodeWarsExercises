@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace CircleAreaInSquare
 {
-    internal class Convert
+    public class Convert
     {
+        public static double SquareAreaToCircle(double size)
+        {
+            double radius = Math.Sqrt(size) / 2;
+            return Math.Round((Math.PI * Math.Pow(radius, 2)), 8);
+        }
     }
 }
