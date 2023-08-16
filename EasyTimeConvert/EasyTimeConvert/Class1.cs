@@ -11,15 +11,15 @@ namespace EasyTimeConvert
     {
         public static string TimeConvert(int num)
         {
-            int hours = 0;
-            int minutes = 0;
-            string result = "";
+            int hours = num / 60;
+            int minutes = num % 60;
             if (num <= 0) return "00:00";
-            hours = num / 60;
-            minutes = num % 60;
-            result = (hours < 10) ? $"0{hours}:{minutes}"
-                : (minutes < 10) ? $"{hours}:0{minutes}" : $"{hours}:{minutes}";
-            return result;
+            else
+            {
+                string minut = minutes.ToString("D2");
+                string godz = hours.ToString("D2");
+                return $"{godz}:{minut}";
+            }
         }
     }
 }
