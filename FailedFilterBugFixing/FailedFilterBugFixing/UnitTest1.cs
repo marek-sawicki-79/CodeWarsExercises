@@ -1,16 +1,14 @@
 namespace FailedFilterBugFixing
 {
+    [TestFixture]
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public static void FixedTest()
         {
-            Assert.Pass();
+            Assert.AreEqual("test", Kata.FilterNumbers("test123"));
+            Assert.AreEqual("abc", Kata.FilterNumbers("a1b2c3"));
+            Assert.AreEqual("aabbccdd", Kata.FilterNumbers("aa1bb2cc3dd"));
         }
     }
 }
