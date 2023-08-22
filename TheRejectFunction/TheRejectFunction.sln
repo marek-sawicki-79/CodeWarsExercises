@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRejectFunction", "TheRejectFunction\TheRejectFunction.csproj", "{A3F39120-909F-40FF-B517-B90E2900D5EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3F39120-909F-40FF-B517-B90E2900D5EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F39120-909F-40FF-B517-B90E2900D5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F39120-909F-40FF-B517-B90E2900D5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F39120-909F-40FF-B517-B90E2900D5EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C44A982-8A03-4C04-BF0D-24456305A993}
+	EndGlobalSection
+EndGlobal
