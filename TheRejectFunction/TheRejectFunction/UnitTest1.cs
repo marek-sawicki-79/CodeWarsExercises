@@ -1,16 +1,12 @@
 namespace TheRejectFunction
 {
-    public class Tests
+    [TestFixture]
+    public class SolutionTest
     {
-        [SetUp]
-        public void Setup()
+        [Test, Description("Sample Test")]
+        public void SampleTest()
         {
-        }
-
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
+            Assert.AreEqual(new int[] { 1, 3, 5 }, Kata.Reject(new int[] { 1, 2, 3, 4, 5, 6 }, (n) => n % 2 == 0));
         }
     }
 }

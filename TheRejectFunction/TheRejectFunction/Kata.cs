@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace TheRejectFunction
 {
-    internal class Kata
+    public class Kata
     {
+        public static int[] Reject(int[] array, Func<int, bool> predicate)
+        {
+            List<int> result= new List<int>();
+            for(int i = -0;  i < array.Length; i++)
+            {
+                if (!predicate(array[i]))
+                {
+                    result.Add(array[i]);
+                }
+            }
+            return result.ToArray();
+        }
     }
 }
