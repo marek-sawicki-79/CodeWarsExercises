@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace OnesComplement
 {
-    internal class Kata
+    public static class Kata
     {
+        public static string OnesComplement(string n)
+        {
+            string result = n.Replace('0', '2');
+            result = result.Replace('1', '0');
+            result = result.Replace('2', '1');
+            return result;
+        }
     }
 }
