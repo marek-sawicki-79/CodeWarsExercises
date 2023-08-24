@@ -10,14 +10,16 @@ namespace MultiplyStringsInArray
     {
         public static string ArrMultiply(string[] arr)
         {
-            int result = 0;
-            int doop = int.Parse(arr[0]);
-            for (int i = 1; i < arr.Length; i++)
-            {
-                result = doop * int.Parse(arr[i]);
-                doop = result;
-            }
-            return result.ToString();
+            //int result = 0;
+            //int doop = int.Parse(arr[0]);
+            //for (int i = 1; i < arr.Length; i++)
+            //{
+            //    result = doop * int.Parse(arr[i]);
+            //    doop = result;
+            //}
+            //return result.ToString();
+
+            return arr.Aggregate((a, b) => $"{int.Parse(a) * int.Parse(b)}");
         }
     }
 }
