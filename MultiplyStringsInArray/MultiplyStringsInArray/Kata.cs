@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace MultiplyStringsInArray
 {
-    internal class Kata
+    public static class Kata
     {
+        public static string ArrMultiply(string[] arr)
+        {
+            int result = 0;
+            int doop = int.Parse(arr[0]);
+            for (int i = 1; i < arr.Length; i++)
+            {
+                result = doop * int.Parse(arr[i]);
+                doop = result;
+            }
+            return result.ToString();
+        }
     }
 }
