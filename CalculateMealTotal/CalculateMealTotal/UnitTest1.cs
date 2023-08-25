@@ -1,16 +1,13 @@
 namespace CalculateMealTotal
 {
-    public class Tests
+    [TestFixture]
+    public class TipTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void Tests()
         {
-            Assert.Pass();
+            Assert.AreEqual(5.75, Kata.CalculateTotal(5.00, 5, 10));
+            Assert.AreEqual(45.10, Kata.CalculateTotal(36.97, 7, 15));
         }
     }
 }
