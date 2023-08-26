@@ -33,12 +33,14 @@ namespace PowersOf4
 
             //return true;
 
-            if (n is int intValue)
-            {
-                return intValue > 0 && (intValue & (intValue - 1)) == 0 && (intValue & 0xAAAAAAAA) == 0;
-            }
+            //if (n is int intValue)
+            //{
+            //    return intValue > 0 && (intValue & (intValue - 1)) == 0 && (intValue & 0xAAAAAAAA) == 0;
+            //}
 
-            return false;
+            //return false;
+
+            return (n is long || n is int) && Convert.ToInt64(n) > 1 && Math.Log(Convert.ToInt64(n), 4) % 1 == 0;
         }
     }
 }
