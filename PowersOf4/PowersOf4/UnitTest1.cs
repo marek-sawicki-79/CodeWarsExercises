@@ -1,16 +1,18 @@
 namespace PowersOf4
 {
-    public class Tests
+    [TestFixture]
+    public class PowerTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void BasicTests()
         {
-            Assert.Pass();
+            Assert.AreEqual(false, Power.PowerOf4(0));
+            Assert.AreEqual(true, Power.PowerOf4(4));
+            Assert.AreEqual(true, Power.PowerOf4(16));
+            Assert.AreEqual(true, Power.PowerOf4(1));
+            Assert.AreEqual(false, Power.PowerOf4(3.1415));
+            Assert.AreEqual(false, Power.PowerOf4("4"));
+            Assert.AreEqual(false, Power.PowerOf4(null));
         }
     }
 }
