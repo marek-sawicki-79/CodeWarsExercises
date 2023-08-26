@@ -10,28 +10,35 @@ namespace PowersOf4
     {
         public static bool PowerOf4(object n)
         {
-            int num = 0;
-            int? nullableNum = n as int?;
+            //int num = 0;
+            //int? nullableNum = n as int?;
 
-            if (nullableNum == null)
+            //if (nullableNum == null)
+            //{
+            //    return false;
+            //}
+            //else
+            //{
+            //    num = nullableNum.Value;
+            //}
+            //if (num <= 0) return false;
+            //while(num > 1)
+            //{
+            //    if(num % 4 != 0)
+            //    {
+            //        return false;
+            //    }
+            //    num /= 4;
+            //}
+
+            //return true;
+
+            if (n is int intValue)
             {
-                return false;
-            }
-            else
-            {
-                num = nullableNum.Value;
-            }
-            if (num <= 0) return false;
-            while(num > 1)
-            {
-                if(num % 4 != 0)
-                {
-                    return false;
-                }
-                num /= 4;
+                return intValue > 0 && (intValue & (intValue - 1)) == 0 && (intValue & 0xAAAAAAAA) == 0;
             }
 
-            return true;
+            return false;
         }
     }
 }
