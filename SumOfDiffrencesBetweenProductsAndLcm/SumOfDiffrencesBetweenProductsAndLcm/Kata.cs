@@ -10,21 +10,34 @@ namespace SumOfDiffrencesBetweenProductsAndLcm
     {
         public static int SumDifferencesBetweenProductsAndLCMs(int[][] pairs)
         {
-            int[] results = new int[pairs.Length];
-            
-            for(int i = 0; i < pairs.Length; i++)
+            //int[] results = new int[pairs.Length];
+
+            //for(int i = 0; i < pairs.Length; i++)
+            //{
+            //    int[] pair = pairs[i];
+            //    int a = pair[0];
+            //    int b = pair[1];
+            //    int product = a * b;
+
+            //    int gcd = GCD(a, b);
+            //    int lcm = (b != 0) ? (a / gcd) * b : 0;
+
+            //    results[i] = Math.Abs(product - lcm);
+            //}
+            //return results.Sum();
+            return pairs.Sum(pair =>
             {
-                int[] pair = pairs[i];
                 int a = pair[0];
                 int b = pair[1];
                 int product = a * b;
-                
+
                 int gcd = GCD(a, b);
+
+                // Sprawdź, czy b nie jest równe zero przed obliczeniem LCM
                 int lcm = (b != 0) ? (a / gcd) * b : 0;
-                
-                results[i] = Math.Abs(product - lcm);
-            }
-            return results.Sum();
+
+                return Math.Abs(product - lcm);
+            });
         }
         private static int GCD(int a, int b)
         {
