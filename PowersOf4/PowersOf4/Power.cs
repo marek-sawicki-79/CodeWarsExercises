@@ -40,7 +40,37 @@ namespace PowersOf4
 
             //return false;
 
-            return (n is long || n is int) && Convert.ToInt64(n) > 1 && Math.Log(Convert.ToInt64(n), 4) % 1 == 0;
+            //return (n is long || n is int) && Convert.ToInt64(n) > 1 && Math.Log(Convert.ToInt64(n), 4) % 1 == 0;
+
+            //if (n == null || n is string || !long.TryParse(n.ToString(), out var number) || number < 4) return false;
+            //return Math.Log(number, 4) % 1 == 0;
+            if (n == null)
+            {
+                return false; 
+            }
+
+            if (n is int || n is long)
+            {
+                long num = Convert.ToInt64(n);
+
+                if (num <= 0)
+                {
+                    return false; 
+                }
+
+                while (num > 1)
+                {
+                    if (num % 4 != 0)
+                    {
+                        return false; 
+                    }
+                    num /= 4; 
+                }
+
+                return true; 
+            }
+
+            return false; 
         }
     }
 }
