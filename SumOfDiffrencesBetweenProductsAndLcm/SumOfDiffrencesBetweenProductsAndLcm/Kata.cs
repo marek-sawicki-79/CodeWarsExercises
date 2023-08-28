@@ -32,8 +32,6 @@ namespace SumOfDiffrencesBetweenProductsAndLcm
                 int product = a * b;
 
                 int gcd = GCD(a, b);
-
-                // Sprawdź, czy b nie jest równe zero przed obliczeniem LCM
                 int lcm = (b != 0) ? (a / gcd) * b : 0;
 
                 return Math.Abs(product - lcm);
