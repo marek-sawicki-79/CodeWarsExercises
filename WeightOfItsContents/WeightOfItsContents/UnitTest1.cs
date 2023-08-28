@@ -1,16 +1,12 @@
 namespace WeightOfItsContents
 {
-    public class Tests
+    [TestFixture]
+    public class Solution
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void MyTest()
         {
-            Assert.Pass();
+            Assert.AreEqual(80, SolutionClass.ContentWeight(120, "2 times larger"));
         }
     }
 }
