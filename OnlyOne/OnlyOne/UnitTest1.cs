@@ -1,16 +1,12 @@
 namespace OnlyOne
 {
-    public class Tests
+    [TestFixture]
+    public class KataTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void BasicTest()
         {
-            Assert.Pass();
+            Assert.AreEqual(true, Kata.OnlyOne(true, false));
         }
     }
 }
