@@ -10,15 +10,17 @@ namespace OnlyOne
     {
         public static bool OnlyOne(params bool[] flags)
         {
-            int trueCount = 0;
-            foreach (bool flag in flags)
-            {
-                if (flag)
-                {
-                trueCount++;
-                }
-            }
-            return (trueCount == 1);
+            //int trueCount = 0;
+            //foreach (bool flag in flags)
+            //{
+            //    if (flag)
+            //    {
+            //    trueCount++;
+            //    }
+            //}
+            //return (trueCount == 1);
+
+            return flags.Count(b => b) == 1;
         }
     }
 }
