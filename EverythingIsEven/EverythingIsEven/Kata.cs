@@ -10,7 +10,7 @@ namespace EverythingIsEven
     {
         public static int EnsureEven(double number)
         {
-            int doop = (int)Math.Round(number);
+            int doop = (number > 0) ? (int)Math.Floor(number) : (int)Math.Ceiling(number);
             return (doop % 2 == 0) ? doop : (doop < 0) ? doop - 1 : doop + 1;
         }
     }
