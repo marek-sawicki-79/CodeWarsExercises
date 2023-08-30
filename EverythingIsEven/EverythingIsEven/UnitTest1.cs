@@ -1,16 +1,13 @@
 namespace EverythingIsEven
 {
+    [TestFixture]
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void SimpleTests()
         {
-            Assert.Pass();
+            Assert.AreEqual(2, Kata.EnsureEven(1));
+            Assert.AreEqual(2, Kata.EnsureEven(1.356));
         }
     }
 }
