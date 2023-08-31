@@ -1,16 +1,22 @@
 namespace SortByHeight
 {
-    public class Tests
+    [TestFixture]
+    public class myjinxin
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
         [Test]
-        public void Test1()
+        public void BasicTests()
         {
-            Assert.Pass();
+            var kata = new Kata();
+
+            Assert.AreEqual(new int[] { -1, 150, 160, 170, -1, -1, 180, 190 }, kata.SortByHeight(new int[] { -1, 150, 190, 170, -1, -1, 160, 180 }));
+
+            Assert.AreEqual(new int[] { -1, -1, -1, -1, -1 }, kata.SortByHeight(new int[] { -1, -1, -1, -1, -1 }));
+
+            Assert.AreEqual(new int[] { 2, 2, 4, 9, 11, 16 }, kata.SortByHeight(new int[] { 4, 2, 9, 11, 2, 16 }));
+
+
         }
+
     }
 }
