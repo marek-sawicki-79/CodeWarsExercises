@@ -24,6 +24,10 @@ namespace WhatTimeIsIt
             {
                 result[0] = "00";
             }
+            else if (strings[0] == "12" && strings[2].EndsWith("PM"))
+            {
+                result[0] = strings[0];
+            }
             else
             {
                 result[0] = strings[0];
